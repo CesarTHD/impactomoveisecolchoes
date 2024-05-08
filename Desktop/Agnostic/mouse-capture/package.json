@@ -1,0 +1,37 @@
+{
+  "name": "mouse-capture",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-base": "^25.1.35",
+    "@syncfusion/ej2-react-base": "^25.1.35",
+    "@syncfusion/ej2-react-buttons": "^25.1.35",
+    "@syncfusion/ej2-react-grids": "^25.1.37",
+    "@syncfusion/ej2-react-heatmap": "^25.1.35",
+    "framer-motion": "^11.0.20",
+    "jquery": "^3.7.1",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-heatmap-grid": "^0.9.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

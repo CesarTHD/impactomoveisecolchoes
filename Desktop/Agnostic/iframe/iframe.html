@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFrame</title>
+</head>
+<body>
+
+<script>
+  // Adicione um ouvinte de evento para escutar mensagens da página principal
+  window.addEventListener('message', (event) => {
+    // Exiba a mensagem recebida da página principal
+    console.log('Mensagem recebida da página principal:', event.data);
+
+    // Responda à mensagem
+    const replyMessage = 'Olá, página principal! Estou bem, obrigado!';
+    // Envie a resposta de volta para a página principal
+    event.source.postMessage(replyMessage, event.origin);
+    console.log('Resposta enviada para a página principal:', replyMessage);
+  });
+</script>
+
+</body>
+</html>

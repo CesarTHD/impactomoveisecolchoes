@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Capture</title>
+</head>
+<body>
+  <button onclick="captureScreen()">Capture Screen</button>
+
+  <script>
+    async function captureScreen() {
+      try {
+        const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+        const videoTrack = stream.getVideoTracks()[0];
+        const imageCapture = new ImageCapture(videoTrack);
+
+        const bitmap = await imageCapture.grabFrame();
+        const canvas = document.createElement('canvas');
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+        const context = canvas.getContext('2d');
+        context.drawImage(bitmap, 0, 0, bitmap.width, bitmap.height);
+
+        // Aqui você pode fazer o que quiser com o canvas, por exemplo, exibir na página ou enviar para o servidor.
+        document.body.appendChild(canvas);
+
+        // Para liberar a mídia e parar a captura após o uso.
+        videoTrack.stop();
+      } catch (error) {
+        console.error('Erro ao capturar a tela:', error);
+      }
+    }
+  </script>
+</body>
+</html>

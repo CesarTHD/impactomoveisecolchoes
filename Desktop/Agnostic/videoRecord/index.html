@@ -1,0 +1,112 @@
+<style>
+    .card {
+        margin-top: 35px;
+        width: 350px;
+        padding: 20px;
+        background: #DCF3FF;
+        box-shadow: 15px 15px 25px -8px rgba(0, 0, 0, 0.25);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .area{
+        border: solid red 1px;
+        display: flex;
+        flex-direction: column;
+        
+        padding: 100px;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: sans-serif;
+        color: black;
+        font-size: 1rem;
+    }
+
+    a {
+        text-decoration: none
+    }
+</style>
+
+<div class="container">
+    <div class="area">
+        <h1>Teste gravação de tela</h1>
+        <button id="toggle">Start</button>
+    </div>
+</div>
+
+
+<script>
+
+    let mediaRecorder = null
+
+    const toggleButton = document.querySelector("#toggle")
+    toggleButton.addEventListener("click", toggleRecord)
+
+    async function toggleRecord() {
+        mediaRecorder = mediaRecorder ? stop(mediaRecorder) : await start()
+        toggleButton.textContent = mediaRecorder ? "Stop" : "Start"
+    }
+
+    async function start() {
+        // Gerar as streams da captura
+        const videoStream = await navigator.mediaDevices.getDisplayMedia({ video: true })
+
+        const audioStream = await navigator.mediaDevices.getUserMedia({ audio: true })
+
+        const stream = new MediaStream([videoStream.getTracks()[0], audioStream.getTracks()[0]])
+
+        // Instanciar o gravador           
+        const mediaRecorder = new MediaRecorder(stream);
+
+        // Caso queira definir um codec específico suportado pelo navegador, pode ser feito da seguinte maneira
+        //const mediaRecorder = new MediaRecorder(stream,{mimeType: "video/webm;codecs=VP9,pcm"});
+
+        const chunks = []
+        mediaRecorder.ondataavailable = function (e) {
+            chunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = () => {
+            const mimeType = chunks[0].type
+            console.log(mimeType)
+            const videoBlob = new Blob(chunks, { type: mimeType });
+            const videoUrl = URL.createObjectURL(videoBlob);
+            const a = document.createElement('a');
+            a.href = videoUrl;
+            a.download = `gravacao_de_tela.${getExtension(mimeType)}`;
+            a.click();
+        }
+
+        mediaRecorder.start()
+        return mediaRecorder
+    }
+
+    function getExtension(mimeType) {
+        const types = [
+            { mime: "video/mp4", ext: "mp4" },
+            { mime: "video/x-matroska", ext: "mkv" },
+            { mime: "video/webm", ext: "webm" }
+        ]
+        return types.filter(type => {
+            if (mimeType.includes(type.mime)) {
+                console.log(type)
+                return true
+            }
+        })[0].ext
+    }
+
+    function stop(mr) {
+        const stream = mr.stream
+        mr.stop();
+        stream.getTracks().forEach(track => track.stop());
+        return null
+    }
+</script>

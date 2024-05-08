@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostMessage Example</title>
+</head>
+<body>
+
+<!-- IFrame embed -->
+<iframe id="myIframe" src="iframe.html" width="400" height="300"></iframe>
+
+<script>
+  // Obtenha uma referência ao iframe
+  const iframe = document.getElementById('myIframe');
+
+  // Adicione um ouvinte de evento para escutar mensagens do iframe
+  window.addEventListener('message', (event) => {
+    // Certifique-se de que a mensagem vem do iframe desejado
+    if (event.source === iframe.contentWindow) {
+      // Exiba a mensagem recebida do iframe
+      console.log('Mensagem recebida da iframe:', event.data);
+    }
+  });
+
+  // Enviar mensagem para o iframe após 2 segundos
+  setTimeout(() => {
+    const message = 'Olá, iframe! Como você está?';
+    // Envie a mensagem para o iframe
+    iframe.contentWindow.postMessage(message, '*');
+    console.log('Mensagem enviada para a iframe:', message);
+  }, 2000);
+</script>
+
+</body>
+</html>

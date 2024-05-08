@@ -1,0 +1,106 @@
+<style>
+    .card {
+        margin-top: 35px;
+        width: 350px;
+        padding: 20px;
+        background: #DCF3FF;
+        box-shadow: 15px 15px 25px -8px rgba(0, 0, 0, 0.25);
+    }
+
+    h1 {
+        font-family: sans-serif;
+        color: black;
+        font-size: 1rem;
+    }
+
+    a {
+        text-decoration: none
+    }
+</style>
+
+<button id="toggle"> Start</button>
+
+<script>
+
+    let mediaRecorder = null
+
+    const toggleButton = document.querySelector("#toggle")
+    toggleButton.addEventListener("click", toggleRecord)
+
+    async function toggleRecord() {
+        mediaRecorder = mediaRecorder ? stop(mediaRecorder) : await start()
+        toggleButton.textContent = mediaRecorder ? "Stop" : "Start"
+    }
+
+    async function start() {
+    let videoStream;
+    try {
+        // Obtém uma lista de dispositivos de mídia, incluindo telas compartilháveis
+        const devices = await navigator.mediaDevices.enumerateDevices();
+
+        // Filtra as telas compartilháveis
+        const screenDevices = devices.filter(device => device.kind === 'videoinput' && device.label.includes('Screen'));
+
+        // Escolhe a primeira tela disponível (você pode ajustar a lógica conforme necessário)
+        const screenDevice = screenDevices[0];
+
+        // Inicia a captura de tela automaticamente
+        videoStream = await navigator.mediaDevices.getUserMedia({
+            video: {
+                mandatory: {
+                    chromeMediaSource: 'desktop',
+                    chromeMediaSourceId: screenDevice.deviceId
+                }
+            },
+            audio: true
+        });
+
+        const stream = new MediaStream([videoStream.getTracks()[0]]);
+
+        const mediaRecorder = new MediaRecorder(stream);
+
+        const chunks = [];
+        mediaRecorder.ondataavailable = function (e) {
+            chunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = () => {
+            const mimeType = chunks[0].type;
+            console.log(mimeType);
+            const videoBlob = new Blob(chunks, { type: mimeType });
+            const videoUrl = URL.createObjectURL(videoBlob);
+            const a = document.createElement('a');
+            a.href = videoUrl;
+            a.download = `screen_capture.${getExtension(mimeType)}`;
+            a.click();
+        };
+
+        mediaRecorder.start();
+        return mediaRecorder;
+    } catch (error) {
+        console.error('Erro ao iniciar a captura de tela:', error);
+    }
+}
+
+
+    function getExtension(mimeType) {
+        const types = [
+            { mime: "video/mp4", ext: "mp4" },
+            { mime: "video/x-matroska", ext: "mkv" },
+            { mime: "video/webm", ext: "webm" }
+        ]
+        return types.filter(type => {
+            if (mimeType.includes(type.mime)) {
+                console.log(type)
+                return true
+            }
+        })[0].ext
+    }
+
+    function stop(mr) {
+        const stream = mr.stream
+        mr.stop();
+        stream.getTracks().forEach(track => track.stop());
+        return null
+    }
+</script>
