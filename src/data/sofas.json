@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sofá Alemanha",
+            "image": "../public/assets/images/sofas/alemanha.png",
+            "price": "R$ 2.499,00"
+        },
+        {
+            "id": 2,
+            "name": "Sofá Califórnia",
+            "image": "../public/assets/images/sofas/california.png",
+            "price": "R$ 799,00"
+        },
+        {
+            "id": 3,
+            "name": "Sofá Merlot II",
+            "image": "../public/assets/images/sofas/merlotII.png",
+            "price": "R$ 1.299,00"
+        }
+    ]
+}
