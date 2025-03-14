@@ -46,7 +46,7 @@ export default function Mesas() {
 
     return (
         <div className="relative">
-            {/* <h2 className="text-2xl text-center">Sofás</h2> */}
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- Mesas -</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.map((product: any) => (
                     <div key={product.id} className="keen-slider__slide p-4">
