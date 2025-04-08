@@ -29,20 +29,7 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
         return () => clearInterval(interval);
     }, [instanceRef]);
 
-    const product = {
-        name: "Sofá Alemanha",
-        description:
-            "Esse sofá combina conforto e sofisticação, com um design moderno e estofado premium para proporcionar o máximo de relaxamento. Ideal para qualquer ambiente.",
-        items: [
-            "Retrátil e Reclinável",
-            "Couro Furado",
-            "Pés em Madeira",
-            "Almofadas em Silicone",
-        ],
-        images: [viewProduct.image, viewProduct.imageVerse],
-    };
-
-    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${product.name}.+Poderia+me+passar+mais+detalhes?`;
+    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Poderia+me+passar+mais+detalhes?`;
 
     return (
         <div className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center">
@@ -57,16 +44,16 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
                 {/* Slider */}
                 <div className="relative">
                     <div ref={sliderRef} className="keen-slider">
-                        {product.images.map((image, index) => (
+                        {viewProduct.images.map((image:string, index:number) => (
                             <div key={index} className="keen-slider__slide">
-                                <Image className="object-cover w-full" width={1000} height={700} src={image} alt={product.name} />
+                                <Image className="object-cover w-full" width={1000} height={700} src={image} alt={viewProduct.name} />
                             </div>
                         ))}
                     </div>
 
                     {/* Indicadores */}
                     <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {product.images.map((_, index) => (
+                        {viewProduct.images.map((_:string, index:number) => (
                             <button
                                 key={index}
                                 onClick={() => instanceRef.current?.moveToIdx(index)}
@@ -93,11 +80,11 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
                     <h2 className="text-xl font-bold">{viewProduct.name}</h2>
                     <p className="mt-2">{viewProduct.description}</p>
 
-                    {/* <ul className="list-disc px-10 mt-4">
-                        {product.items.map((item: string) => (
+                    <ul className="list-disc px-10 mt-4">
+                        {viewProduct.items.map((item: string) => (
                             <li key={item}><p>{item}</p></li>
                         ))}
-                    </ul> */}
+                    </ul>
                     <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida ideal para você.</p>
                     {/* Botão de orçamento */}
                     <a

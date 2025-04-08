@@ -11,7 +11,8 @@ import InstaFeed from "@/components/InstaFeed";
 import Testimonials from "@/components/Testimonials";
 import ViewProduct from "@/components/ViewProduct";
 import BestSales from "@/components/BestSales";
-import Sofas from "@/components/BestSales/Sofas";
+import SofasCouro from "@/components/SofasCouro";
+
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -47,10 +48,13 @@ export default function Home() {
           <Specialties />
         </div>
         <div className="my-12">
-          <BestSales setViewProduct={setViewProduct} />
+          <SofasCouro setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
           <InstaFeed />
+        </div>
+        <div className="my-12">
+          <BestSales setViewProduct={setViewProduct} />
         </div>
         {/* <div className="my-12">
           <Sofas />

@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sofá Benjamin",
+            "images": ["/assets/images/sofas-couro/benjamin.png", "/assets/images/sofas-couro/benjamin-e.png"],
+            "items": ["Revestimento em couro legítimo", "Assento com almofadas fixas", "Enconsto com almofadas removíveis", "Estrutura em madeira de eucalipto", "Pés de ferro"]
+        },
+        {
+            "id": 2,
+            "name": "Sofá Florença",
+            "images": ["/assets/images/sofas-couro/florenca.png", "/assets/images/sofas-couro/florenca-e.png"],
+            "items": ["Assento com molas", "Percintas elásticas", "Encosto com almofadas removíveis", "Revestimento em couro legítimo", "Fibras siliconadas", "Pés em madeira"]
+        },
+        {
+            "id": 3,
+            "name": "Sofá Dollaro",
+            "images": ["/assets/images/sofas-couro/dollaro.png", "/assets/images/sofas-couro/dollaro-e.png"],
+            "items": ["Revestimento em couro legítimo", "Equipamento retrátil e reclinável de acionamento elétrico", "Assento em molas ZigZag", "Enconsto com almofadas de fibras siliconadas", "Estrutura em madeira de eucalipto", "Pés em cantoneira de madeira", "Espuma D28 Soft"]
+        },
+        {
+            "id": 4,
+            "name": "Sofá Dublin",
+            "images": ["/assets/images/sofas-couro/dublin.png", "/assets/images/sofas-couro/dublin-e.png"],
+            "items": ["Revestimento em couro legítimo", "Assento em molas ZigZag", "Enconsto com percintas elásticas", "Estrutura em madeira de eucalipto", "Pés de metal tingido"]
+        },
+        {
+            "id": 5,
+            "name": "Sofá Malta",
+            "images": ["/assets/images/sofas-couro/malta.png", "/assets/images/sofas-couro/malta-e.png"],
+            "items": ["Revestimento em couro legítimo", "Assento fixo com molas e espuma", "Enconsto com almofadas removíveis", "Estrutura em madeira de eucalipto", "Pés de metal tingido", "Fibras siliconadas"]
+        },
+        {
+            "id": 6,
+            "name": "Sofá Concord",
+            "images": ["/assets/images/sofas-couro/concord.png", "/assets/images/sofas-couro/concord-e.png"],
+            "items": ["Revestimento em couro legítimo", "Assento fixo com percintas elásticas e espuma", "Enconsto com almofadas fixas", "Estrutura em madeira de eucalipto", "Pés em cantoneira de madeira", "Fibras siliconadas"]
+        }
+    ]
+}

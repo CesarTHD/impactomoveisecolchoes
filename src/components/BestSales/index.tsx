@@ -44,7 +44,15 @@ export default function BestSales({ setViewProduct }: any) {
                         <button onClick={() => setViewProduct(product)} className="w-full h-full shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
                             <Card className="cursor-pointer border-[#332921] h-full p-0 overflow-hidden">
                                 <CardContent className="flex flex-col items-center p-0 bg-components">
-                                    <Image src={product.image} alt={product.name} width={800} height={500} className="rounded-t-xl w-full" />
+                                    <div className="relative w-full aspect-[16/10]">
+                                        <Image
+                                            src={product.images[0]}
+                                            alt={product.name}
+                                            fill
+                                            className="rounded-t-xl object-cover"
+                                        />
+                                    </div>
+
                                     <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
                                     <p className="text-xs my-4 underline">Ver detalhes</p>
                                 </CardContent>
