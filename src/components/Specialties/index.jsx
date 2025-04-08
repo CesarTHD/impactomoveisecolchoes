@@ -109,7 +109,7 @@ export default function Specialties() {
                   Devolução - 7 Dias
                 </h2>
                 <p className="text-xs 2xl:text-sm text-qgray">
-                  Cliente pode devolver em até 7 dias.
+                  Cliente pode devolver em até 7 dias se a compra for feita 100% online.
                 </p>
               </div>
             </div>
@@ -212,7 +212,7 @@ export default function Specialties() {
                   Qualidade de Excelência
                 </h2>
                 <p className="text-xs 2xl:text-sm text-qgray">
-                  Produtos de alta qualidade com garantia de 1 ano
+                  Produtos de alta qualidade com garantia de 1 ano.
                 </p>
               </div>
             </div>

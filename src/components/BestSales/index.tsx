@@ -4,21 +4,12 @@ import { useRouter } from "next/navigation";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import sofa1 from "@/assets/images/sofas/alemanha.png";
-import sofa2 from "@/assets/images/sofas/california.png";
-import sofa3 from "@/assets/images/sofas/merlotII.png";
-
-const products = [
-    { id: 1, name: "Sofá Alemanha", image: sofa1, price: "R$ 2.499,00" },
-    { id: 2, name: "Sofá Califórnia", image: sofa2, price: "R$ 799,00" },
-    { id: 3, name: "Sofá Merlot II", image: sofa3, price: "R$ 1.299,00" },
-  ];
+import products from './bestSales.json';
 
 
-export default function BestSales({setViewProduct}: any) {
+export default function BestSales({ setViewProduct }: any) {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -40,7 +31,7 @@ export default function BestSales({setViewProduct}: any) {
         if (!instanceRef.current) return;
         const interval = setInterval(() => {
             instanceRef.current?.next();
-        }, 5000);
+        }, 10000);
         return () => clearInterval(interval);
     }, [instanceRef]);
 
@@ -48,9 +39,9 @@ export default function BestSales({setViewProduct}: any) {
         <div id="bestSales" className="w-full py-6 relative">
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- Mais Vendidos -</h2>
             <div ref={sliderRef} className="keen-slider">
-                {products.map((product: any) => (
+                {products.products.map((product: any) => (
                     <div key={product.id} className="keen-slider__slide p-4">
-                        <button onClick={() => setViewProduct(true)} className="w-full h-full shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
+                        <button onClick={() => setViewProduct(product)} className="w-full h-full shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
                             <Card className="cursor-pointer border-[#332921] h-full p-0 overflow-hidden">
                                 <CardContent className="flex flex-col items-center p-0 bg-components">
                                     <Image src={product.image} alt={product.name} width={800} height={500} className="rounded-t-xl w-full" />
@@ -73,7 +64,7 @@ export default function BestSales({setViewProduct}: any) {
 
             {/* Indicadores */}
             <div className="flex justify-center mt-4 space-x-2">
-                {products.map((_: any, index: number) => (
+                {products.products.map((_: any, index: number) => (
                     <button key={index} onClick={() => instanceRef.current?.moveToIdx(index)} className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-gray-800' : 'bg-gray-400'}`} />
                 ))}
             </div>

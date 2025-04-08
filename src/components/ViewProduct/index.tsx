@@ -7,11 +7,7 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 
-import sofa1 from "@/assets/images/sofas/alemanha.png";
-import sofa2 from "@/assets/images/sofas/california.png";
-import sofa3 from "@/assets/images/sofas/merlotII.png";
-
-const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => void }) => {
+const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -29,7 +25,7 @@ const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => v
         if (!instanceRef.current) return;
         const interval = setInterval(() => {
             instanceRef.current?.next();
-        }, 5000);
+        }, 10000);
         return () => clearInterval(interval);
     }, [instanceRef]);
 
@@ -43,7 +39,7 @@ const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => v
             "Pés em Madeira",
             "Almofadas em Silicone",
         ],
-        images: [sofa1, sofa2, sofa3],
+        images: [viewProduct.image, viewProduct.imageVerse],
     };
 
     const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${product.name}.+Poderia+me+passar+mais+detalhes?`;
@@ -63,7 +59,7 @@ const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => v
                     <div ref={sliderRef} className="keen-slider">
                         {product.images.map((image, index) => (
                             <div key={index} className="keen-slider__slide">
-                                <Image className="object-cover w-full" src={image} alt={product.name} />
+                                <Image className="object-cover w-full" width={1000} height={700} src={image} alt={product.name} />
                             </div>
                         ))}
                     </div>
@@ -78,7 +74,6 @@ const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => v
                             />
                         ))}
                     </div>
-
                     {/* Botões de navegação */}
                     <button
                         onClick={() => instanceRef.current?.prev()}
@@ -93,17 +88,16 @@ const ViewProduct = ({ setViewProduct }: { setViewProduct: (value: boolean) => v
                         <ChevronRight size={24} />
                     </button>
                 </div>
-
                 {/* Informações do produto */}
                 <div className="p-5">
-                    <h2 className="text-xl font-bold">{product.name}</h2>
-                    <p className="mt-2">{product.description}</p>
+                    <h2 className="text-xl font-bold">{viewProduct.name}</h2>
+                    <p className="mt-2">{viewProduct.description}</p>
 
-                    <ul className="list-disc px-10 mt-4">
+                    {/* <ul className="list-disc px-10 mt-4">
                         {product.items.map((item: string) => (
                             <li key={item}><p>{item}</p></li>
                         ))}
-                    </ul>
+                    </ul> */}
                     <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida ideal para você.</p>
                     {/* Botão de orçamento */}
                     <a

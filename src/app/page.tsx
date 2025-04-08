@@ -16,7 +16,7 @@ import Sofas from "@/components/BestSales/Sofas";
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [viewProduct, setViewProduct] = useState(false);
+  const [viewProduct, setViewProduct]:any = useState(false);
 
 
   return (
@@ -24,7 +24,7 @@ export default function Home() {
       {/* <Middlebar className="quomodo-shop-middle-bar lg:block hidden" /> */}
       {viewProduct && (
         <div className="fixed inset-0 bg-black/50 z-40">
-          <ViewProduct setViewProduct={setViewProduct} />
+          <ViewProduct viewProduct={viewProduct} setViewProduct={setViewProduct} />
         </div>
       )}
 
@@ -52,9 +52,9 @@ export default function Home() {
         <div className="my-12">
           <InstaFeed />
         </div>
-        <div className="my-12">
+        {/* <div className="my-12">
           <Sofas />
-        </div>
+        </div> */}
         <div className="my-32">
           <AboutUs />
         </div>

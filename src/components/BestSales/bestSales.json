@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sofá Benjamin",
+            "image": "/assets/images/sofas-couro/benjamin.png",
+            "imageVerse": "/assets/images/sofas-couro/benjamin-e.png"
+        },
+        {
+            "id": 2,
+            "name": "Painel Nobre",
+            "image": "/assets/images/ripados/nobre.png",
+            "imageVerse": "/assets/images/ripados/nobre-e.png"
+        },
+        {
+            "id": 3,
+            "name": "Painel Empire",
+            "image": "/assets/images/ripados/empire.png",
+            "imageVerse": "/assets/images/ripados/empire-e.png"
+        },
+        {
+            "id": 4,
+            "name": "Sofá Dublin",
+            "image": "/assets/images/sofas-couro/dublin.png",
+            "imageVerse": "/assets/images/sofas-couro/dublin-e.png"
+        },
+        {
+            "id": 5,
+            "name": "Poltrona Amanda",
+            "image": "/assets/images/poltronas/amanda.png",
+            "imageVerse": "/assets/images/poltronas/amanda-e.png"
+        }        
+    ]
+}
