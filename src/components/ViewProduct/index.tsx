@@ -29,7 +29,7 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
         return () => clearInterval(interval);
     }, [instanceRef]);
 
-    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Poderia+me+passar+mais+detalhes?`;
+    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
 
     return (
         <div className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center">
