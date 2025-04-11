@@ -6,10 +6,8 @@ import "keen-slider/keen-slider.min.css";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import products from './bestSales.json';
 
-
-export default function BestSales({ setViewProduct }: any) {
+export default function CarouselProducts({ title, products, setViewProduct }: any) {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -36,8 +34,8 @@ export default function BestSales({ setViewProduct }: any) {
     }, [instanceRef]);
 
     return (
-        <div id="bestSales" className="w-full py-6 relative">
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- Mais Vendidos -</h2>
+        <div id="sofasCouro" className="w-full py-6 relative">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- {title} -</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.products.map((product: any) => (
                     <div key={product.id} className="keen-slider__slide p-4">

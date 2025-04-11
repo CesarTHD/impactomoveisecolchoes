@@ -10,15 +10,16 @@ import Location from "@/components/Location";
 import InstaFeed from "@/components/InstaFeed";
 import Testimonials from "@/components/Testimonials";
 import ViewProduct from "@/components/ViewProduct";
-import BestSales from "@/components/BestSales";
-import SofasCouro from "@/components/SofasCouro";
+import CarouselProducts from "@/components/CarouselProducts";
+import sofas from "@/data/sofasCouro.json";
+import poltronasCouro from "@/data/poltronasCouro.json";
+import paineis from "@/data/paineis.json";
 
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [viewProduct, setViewProduct]:any = useState(false);
-
 
   return (
     <div className="w-full relative">
@@ -32,14 +33,14 @@ export default function Home() {
       <Image
         className="w-full h-auto mask-fade-sides object-cover xl:px-20 hidden md:block"
         width={1440}
-        height={500} // Defina uma altura para garantir que o efeito blush seja visível
+        height={500}
         src={banner}
         alt="Banner Impacto Móveis"
       />
       <Image
         className="w-full h-auto mask-fade-sides object-cover xl:px-20 block md:hidden"
         width={1440}
-        height={500} // Defina uma altura para garantir que o efeito blush seja visível
+        height={500}
         src={bannerMobile}
         alt="Banner Impacto Móveis"
       />
@@ -48,17 +49,17 @@ export default function Home() {
           <Specialties />
         </div>
         <div className="my-12">
-          <SofasCouro setViewProduct={setViewProduct} />
+          <CarouselProducts title={"Sofás em Couro Legítimo"} products={sofas} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
           <InstaFeed />
         </div>
         <div className="my-12">
-          <BestSales setViewProduct={setViewProduct} />
+          <CarouselProducts title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
         </div>
-        {/* <div className="my-12">
-          <Sofas />
-        </div> */}
+        <div className="my-12">
+          <CarouselProducts title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
+        </div>
         <div className="my-32">
           <AboutUs />
         </div>

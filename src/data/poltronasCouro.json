@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Poltrona Amanda",
+      "images": ["/assets/images/poltronas-couro/amanda.png", "/assets/images/poltronas-couro/amanda-e.png"],
+      "items": ["Revestimento em couro 100% legítimo", "Assentos removíveis com percintas elásticas", "Enconsto e assento removíveis", "Estrutura em madeira de eucalipto", "Pés em madeira com rodízio de latão dourado", "Opção de pés sem rodinhas"],
+      "description": "Design clássico com toque de elegância. A Amanda apresenta um acabamento sofisticado em couro legítimo marrom, perfeita para ambientes refinados que valorizam conforto e tradição."
+    },
+    {
+      "id": 2,
+      "name": "Poltrona Antonella",
+      "images": ["/assets/images/poltronas-couro/antonella.png", "/assets/images/poltronas-couro/antonella-e.png"],
+      "items": ["Equipamento retrátil e reclinável de acionamento elétrico","Assento com espuma D28 e molas zigzag", "Percintas elásticas", "Encosto com almofadas de fibra siliconada", "Revestimento em couro legítimo", "Pés em madeira maciça"],
+      "description": "Conforto e tecnologia em um só modelo. A Antonella combina o luxo do couro branco com mecanismos elétricos de reclinação, ideal para quem busca relaxamento com estilo."
+    },
+    {
+      "id": 3,
+      "name": "Poltrona Ellus",
+      "images": ["/assets/images/poltronas-couro/ellus.png", "/assets/images/poltronas-couro/ellus-e.png"],
+      "items": ["Assento fixo com percintas elásticas e espumas", "Revestimento em couro legítimo", "Enconsto com almofadas de fibras siliconadas", "Estrutura em madeira de eucalipto", "Pés de metal tingido"],
+      "description": "Com visual contemporâneo e acabamento em couro verde musgo escuro, a Ellus é a escolha perfeita para quem deseja sofisticação e estilo moderno no mesmo móvel."
+    },
+    {
+      "id": 4,
+      "name": "Poltrona Luiza",
+      "images": ["/assets/images/poltronas-couro/luiza.png", "/assets/images/poltronas-couro/luiza-e.png"],
+      "items": ["Revestimento em couro legítimo", "Assento e encosto com percintas elásticas e espumas", "Assento removível", "Estrutura em madeira de eucalipto", "Pés torneados em madeira", "Opção de pés com rodízio"],
+      "description": "Inspirada no estilo clássico com ares de realeza, a Luiza encanta com seus detalhes em metal e pés torneados, unindo sofisticação e imponência em uma peça atemporal."
+    },
+    {
+      "id": 5,
+      "name": "Agnes e Dallas",
+      "images": ["/assets/images/poltronas-couro/agnes-dallas.png"],
+      "items": ["Revestimento em couro legítimo", "Assentos fixos com espuma", "Estrutura em madeira de eucalipto tratado", "Pés em metal tingido"],
+      "description": "Uma combinação moderna e robusta. O conjunto Agnes e Dallas traz personalidade e conforto, com estrutura sólida em madeira e pés metálicos que garantem um toque industrial elegante."
+    }
+  ]
+}

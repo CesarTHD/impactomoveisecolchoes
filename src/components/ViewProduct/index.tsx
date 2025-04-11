@@ -85,7 +85,7 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
                             <li key={item}><p>{item}</p></li>
                         ))}
                     </ul>
-                    <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida ideal para você.</p>
+                    <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida e o material ideais para você.</p>
                     {/* Botão de orçamento */}
                     <a
                         href={whatsappLink}

@@ -1,0 +1,121 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sofá Benjamin",
+      "images": [
+        "/assets/images/sofas-couro/benjamin.png",
+        "/assets/images/sofas-couro/benjamin-e.png"
+      ],
+      "items": [
+        "Revestimento em couro legítimo",
+        "Assento com almofadas fixas",
+        "Enconsto com almofadas removíveis",
+        "Estrutura em madeira de eucalipto",
+        "Pés de ferro"
+      ],
+      "description": "O Sofá Benjamin une sofisticação e design contemporâneo com o máximo de conforto. Produzido com madeira de reflorestamento, valoriza o meio ambiente sem abrir mão da durabilidade e beleza do couro legítimo."
+    },
+    {
+      "id": 2,
+      "name": "Sofá Florença",
+      "images": [
+        "/assets/images/sofas-couro/florenca.png",
+        "/assets/images/sofas-couro/florenca-e.png"
+      ],
+      "items": [
+        "Assento com molas",
+        "Percintas elásticas",
+        "Encosto com almofadas removíveis",
+        "Revestimento em couro legítimo",
+        "Fibras siliconadas",
+        "Pés em madeira"
+      ],
+      "description": "Elegância e conforto definem o Sofá Florença. Seu design refinado e materiais nobres oferecem um toque de luxo sustentável para sua casa, com estrutura em madeira de reflorestamento que respeita o meio ambiente."
+    },
+    {
+      "id": 3,
+      "name": "Sofá Dollaro",
+      "images": [
+        "/assets/images/sofas-couro/dollaro.png",
+        "/assets/images/sofas-couro/dollaro-e.png"
+      ],
+      "items": [
+        "Revestimento em couro legítimo",
+        "Equipamento retrátil e reclinável de acionamento elétrico",
+        "Assento em molas ZigZag",
+        "Enconsto com almofadas de fibras siliconadas",
+        "Estrutura em madeira de eucalipto",
+        "Pés em cantoneira de madeira",
+        "Espuma D28 Soft"
+      ],
+      "description": "Com design luxuoso e tecnologia de ponta, o Sofá Dollaro oferece o máximo em conforto e requinte. Feito com madeira de reflorestamento e couro legítimo, é a escolha perfeita para quem busca sofisticação sustentável."
+    },
+    {
+      "id": 4,
+      "name": "Sofá Dublin",
+      "images": [
+        "/assets/images/sofas-couro/dublin.png",
+        "/assets/images/sofas-couro/dublin-e.png"
+      ],
+      "items": [
+        "Revestimento em couro legítimo",
+        "Assento em molas ZigZag",
+        "Enconsto com percintas elásticas",
+        "Estrutura em madeira de eucalipto",
+        "Pés de metal tingido"
+      ],
+      "description": "Minimalista e elegante, o Sofá Dublin encanta pelo design moderno e conforto impecável. Sua estrutura em madeira de reflorestamento garante resistência e compromisso com o meio ambiente."
+    },
+    {
+      "id": 5,
+      "name": "Sofá Malta",
+      "images": [
+        "/assets/images/sofas-couro/malta.png",
+        "/assets/images/sofas-couro/malta-e.png"
+      ],
+      "items": [
+        "Revestimento em couro legítimo",
+        "Assento fixo com molas e espuma",
+        "Enconsto com almofadas removíveis",
+        "Estrutura em madeira de eucalipto",
+        "Pés de metal tingido",
+        "Fibras siliconadas"
+      ],
+      "description": "O Sofá Malta combina conforto envolvente com um visual sofisticado. Ideal para quem busca beleza, durabilidade e respeito ao meio ambiente através do uso de madeira de reflorestamento."
+    },
+    {
+      "id": 6,
+      "name": "Sofá Concord",
+      "images": [
+        "/assets/images/sofas-couro/concord.png",
+        "/assets/images/sofas-couro/concord-e.png"
+      ],
+      "items": [
+        "Revestimento em couro legítimo",
+        "Assento fixo com percintas elásticas e espuma",
+        "Enconsto com almofadas fixas",
+        "Estrutura em madeira de eucalipto",
+        "Pés em cantoneira de madeira",
+        "Fibras siliconadas"
+      ],
+      "description": "Com linhas sofisticadas e acabamento impecável, o Sofá Concord transforma qualquer ambiente. Fabricado com madeira de reflorestamento e couro legítimo, une conforto, elegância e consciência ecológica."
+    },
+    {
+      "id": 6,
+      "name": "Sofá Astúria",
+      "images": [
+        "/assets/images/sofas-couro/asturia.png",
+        "/assets/images/sofas-couro/asturia-e.png"
+      ],
+      "items": [
+        "Revestimento em couro 100% legítimo",
+        "Assento com almofadas removíveis",
+        "Enconsto com molas zigzag e espuma",
+        "Estrutura em madeira de eucalipto",
+        "Pés em cantoneira de madeira"
+      ],
+      "description": "Com linhas amplas e elegantes, o Sofá Astúria transmite sofisticação e aconchego. Seu revestimento em couro legítimo marrom e o acolchoado generoso proporcionam um visual imponente e extremamente confortável. Ideal para ambientes que pedem estilo e bem-estar em cada detalhe."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Painel Nobre",
+        "images": ["/assets/images/ripados/nobre.png", "/assets/images/ripados/nobre-e.png"],
+        "items": ["Suporta TV de até 85 polegadas", "Produzido em MDP e MDF", "Portas laterais com abertura em toque", "Cantos arredondados", "Dobradiças metálicas", "Pés de madeira maciça"],
+        "description": "Elegância e funcionalidade se encontram no Painel Nobre. Com design imponente, portas com abertura por toque e cantos arredondados, é ideal para quem busca sofisticação em cada detalhe."
+      },
+      {
+        "id": 2,
+        "name": "Painel Empire",
+        "images": ["/assets/images/ripados/empire.png", "/assets/images/ripados/empire-e.png"],
+        "items": ["Iluminação com perfil de LED", "Produzido em MDP e MDF de 15mm", "Portas de correr", "Suporta TV de até 85 polegadas"],
+        "description": "Design contemporâneo com iluminação em LED que valoriza o ambiente. O Painel Empire alia praticidade com suas portas de correr e suporte para TVs grandes, trazendo modernidade para sua sala."
+      },
+      {
+        "id": 3,
+        "name": "Painel Artis",
+        "images": ["/assets/images/ripados/artis.png", "/assets/images/ripados/artis-e.png"],
+        "items": ["Produzido em MDP e MDF de 25mm e 15mm", "Portas laterais com pistão a gás", "Suporta TV de até 70 polegadas", "Rodízios cromados", "Detalhe ripado"],
+        "description": "Com detalhes ripados e portas com pistão a gás, o Painel Artis destaca-se pelo visual elegante e moderno. Ideal para ambientes sofisticados que buscam funcionalidade e estilo."
+      },
+      {
+        "id": 4,
+        "name": "Painel Luxor",
+        "images": ["/assets/images/ripados/luxor.png", "/assets/images/ripados/luxor-e.png"],
+        "items": ["Portas com puxador", "Produzido em MDP e MDF", "Prateleira inferior removível", "Ideais para TV 65 polegadas"],
+        "description": "Com linhas sóbrias e acabamento refinado, o Painel Luxor é perfeito para compor ambientes elegantes. Sua prateleira removível oferece praticidade para organização e decoração."
+      },
+      {
+        "id": 5,
+        "name": "Painel Self",
+        "images": ["/assets/images/ripados/self.png", "/assets/images/ripados/self-e.png"],
+        "items": ["Produzido em MDP e MDF", "Porta basculante com pistão a gás", "Puxador metálico dourado", "Produzido em MDP e MDF de 25mm e 15mm", "Tampo e prateleira superior com 25mm"],
+        "description": "Moderno e sofisticado, o Painel Self impressiona pelo ripado autêntico montado e pelo detalhe dourado dos puxadores. Uma peça de destaque que valoriza qualquer ambiente."
+      },
+      {
+        "id": 6,
+        "name": "Painel Titan",
+        "images": ["/assets/images/ripados/titan.png", "/assets/images/ripados/titan-e.png"],
+        "items": ["4 portas com dobradiças laterais", "Puxadores de portas metálicos dourados", "Produzido em MDP e MDF com 40mm, 25mm e 15mm", "Luminária de LED", "Nicho Lateral com prateleiras de vidro"],
+        "description": "Imponente e cheio de personalidade, o Painel Titan chama atenção pelo ripado com larguras intercaladas, iluminação LED embutida e detalhes dourados que elevam o nível do seu espaço."
+      }
+    ]
+  }
+  
