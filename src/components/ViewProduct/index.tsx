@@ -95,6 +95,7 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                     <a
                         href={whatsappLink}
                         target="_blank"
+                        id="contatoProduto"
                         rel="noopener noreferrer"
                         className="mt-4 flex bg-red-800 text-white justify-center gap-4 py-2 rounded-lg font-semibold hover:bg-red-900 transition"
                     >
