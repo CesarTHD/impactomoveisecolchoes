@@ -6,8 +6,9 @@ import "keen-slider/keen-slider.min.css";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
+import iconWhats from "@/assets/images/icon-whatsapp.png";
 
-const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
+const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -33,18 +34,22 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
 
     return (
         <div className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center">
-            <div className="w-full max-w-3xl bg-[#FEF9DC] border-2 border-amber-50 rounded-2xl shadow-lg overflow-hidden relative z-40">
+            <div className="w-full max-w-3xl bg-[#FEF9DC] rounded-2xl shadow-lg overflow-hidden relative z-40">
                 {/* Botão de Fechar */}
                 <button
                     onClick={() => setViewProduct(false)}
-                    className="absolute top-2 right-2 bg-white rounded-full shadow-lg hover:scale-110 cursor-pointer z-50"
+                    className="absolute w-16 top-2 right-6 rounded-full shadow-lg hover:scale-110 cursor-pointer z-50"
                 >
-                    <XCircleIcon strokeWidth={2} className="w-8 text-red-700" />
+                    <div className="relative flex items-center w-20 h-6">
+                        <p className="text-red-700! bg-[#FEF9DC] px-2 rounded-bl-xl rounded-tl-xl border-y-2 border-l-2 border-red-700  font-semibold text-sm absolute">fechar</p>
+                        <XCircleIcon strokeWidth={2} className="w-8 bg-[#FEF9DC] rounded-full text-red-700 absolute right-0" />
+
+                    </div>
                 </button>
                 {/* Slider */}
                 <div className="relative">
                     <div ref={sliderRef} className="keen-slider">
-                        {viewProduct.images.map((image:string, index:number) => (
+                        {viewProduct.images.map((image: string, index: number) => (
                             <div key={index} className="keen-slider__slide">
                                 <Image className="object-cover w-full" width={1000} height={700} src={image} alt={viewProduct.name} />
                             </div>
@@ -53,7 +58,7 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
 
                     {/* Indicadores */}
                     <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {viewProduct.images.map((_:string, index:number) => (
+                        {viewProduct.images.map((_: string, index: number) => (
                             <button
                                 key={index}
                                 onClick={() => instanceRef.current?.moveToIdx(index)}
@@ -91,9 +96,10 @@ const ViewProduct = ({ viewProduct, setViewProduct } : any) => {
                         href={whatsappLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-4 block bg-red-800 text-white text-center py-2 rounded-lg font-semibold hover:bg-red-900 transition"
+                        className="mt-4 flex bg-red-800 text-white justify-center gap-4 py-2 rounded-lg font-semibold hover:bg-red-900 transition"
                     >
-                        Solicitar Orçamento
+                        <p className="text-white!">Solicitar Orçamento</p>
+                        <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
                     </a>
                 </div>
             </div>

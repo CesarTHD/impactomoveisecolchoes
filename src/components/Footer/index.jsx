@@ -4,9 +4,10 @@ import paymentGetways from "@/assets/images/payment-getways.png"
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
+import logoCesar from "@/assets/images/logo-cesar.jpg";
 
 export default function Footer() {
-const router = useRouter();
+  const router = useRouter();
 
   return (
     <footer className="footer-section-wrapper bg-components print:hidden px-6">
@@ -72,16 +73,16 @@ const router = useRouter();
                     </a>
                   </li>
                   <li>
-                    <a href="#" >
+                    <a href="#poltronas" >
                       <span className="text-[2F2F2F] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                        Mesas
+                        Poltronas
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a href="#bestSales">
+                    <a href="#paineis">
                       <span className="text-[2F2F2F] text-[15px] hover:text-qblack border-b border-transparent hover:border-qblack cursor-pointer capitalize">
-                        Mais Vendidos
+                        Paineis
                       </span>
                     </a>
                   </li>
@@ -91,7 +92,7 @@ const router = useRouter();
             <div className="lg:w-1/3 lg:flex lg:flex-col items-center w-full mb-10 lg:mb-0 ">
               <div>
                 <div className="mb-5">
-                  <h6 className="text-[18] font-500 text-[#2F2F2F]">
+                  <h6 className="font-500 text-[#2F2F2F]">
                     General button
                   </h6>
                 </div>
@@ -143,10 +144,15 @@ const router = useRouter();
           </div>
         </div>
         <div className="bottom-bar border-t border-qgray-border lg:h-[82px] lg:flex justify-between items-center">
-          <div className="flex lg:space-x-5 justify-between items-center mb-3">
-            <span className="sm:text-base text-[10px] text-qgray font-300">
-              ©2025 Impacto Móveis - Todos os direitos reservados
+          <div className="flex justify-between items-center mb-3">
+            <span className="sm:text-base text-[14px] text-gray-700 font-300">
+              ©2025 Impacto Móveis - Todos os direitos reservados. Desenvolvido por:
             </span>
+            <div className="flex justify-center items-center w-20 relative h-16">
+              <a className="" href="https://wa.me/5561998374202?text=Ol%C3%A1,%20gostaria%20de%20desenvolver%20um%20site!%20" target="_blank">
+                <Image src={logoCesar} className="w-10 h-10 hover:scale-110 rounded-md" title="César THD" alt="logo César THD" />
+              </a>
+            </div>
           </div>
           <div className="">
             <a href="#">

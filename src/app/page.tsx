@@ -49,16 +49,16 @@ export default function Home() {
           <Specialties />
         </div>
         <div className="my-12">
-          <CarouselProducts title={"Sofás em Couro Legítimo"} products={sofas} setViewProduct={setViewProduct} />
+          <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofas} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
           <InstaFeed />
         </div>
         <div className="my-12">
-          <CarouselProducts title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
+          <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
-          <CarouselProducts title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
+          <CarouselProducts id={"paineis"} title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
         </div>
         <div className="my-32">
           <AboutUs />

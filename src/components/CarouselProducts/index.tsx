@@ -6,8 +6,9 @@ import "keen-slider/keen-slider.min.css";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import iconWhats from "@/assets/images/icon-whatsapp.png";
 
-export default function CarouselProducts({ title, products, setViewProduct }: any) {
+export default function CarouselProducts({ title, products, setViewProduct, id }: any) {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -34,13 +35,13 @@ export default function CarouselProducts({ title, products, setViewProduct }: an
     }, [instanceRef]);
 
     return (
-        <div id="sofasCouro" className="w-full py-6 relative">
+        <div id={id} className="w-full py-6 relative">
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- {title} -</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.products.map((product: any) => (
                     <div key={product.id} className="keen-slider__slide p-4">
-                        <button onClick={() => setViewProduct(product)} className="w-full h-full shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
-                            <Card className="cursor-pointer border-[#332921] h-full p-0 overflow-hidden">
+                        <button onClick={() => setViewProduct(product)} className="w-full h-full border-red-500 shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
+                            <Card className="cursor-pointer border-[#332921] h-full p-0 overflow-hidden relative">
                                 <CardContent className="flex flex-col items-center p-0 bg-components">
                                     <div className="relative w-full aspect-[16/10]">
                                         <Image
@@ -54,6 +55,7 @@ export default function CarouselProducts({ title, products, setViewProduct }: an
                                     <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
                                     <p className="text-xs my-4 underline">Ver detalhes</p>
                                 </CardContent>
+                                <Image src={iconWhats} alt="whatsapp impacto móveis" className="absolute right-0 bottom-0 m-4" width={23} height={20} />
                             </Card>
                         </button>
                     </div>
