@@ -35,10 +35,10 @@
     },
     {
       "id": 3,
-      "name": "Sofá Dollaro",
+      "name": "Dollaro Retrátil e Reclinável",
       "images": [
-        "/assets/images/sofas-couro/dollaro.png",
-        "/assets/images/sofas-couro/dollaro-e.png"
+        "/assets/images/sofas-couro/dollaro-e.png",
+        "/assets/images/sofas-couro/dollaro.png"
       ],
       "items": [
         "Revestimento em couro legítimo",
