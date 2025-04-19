@@ -30,11 +30,26 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
         return () => clearInterval(interval);
     }, [instanceRef]);
 
+    useEffect(() => {
+        const handleEsc = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setViewProduct(false);
+            }
+        };
+    
+        document.addEventListener("keydown", handleEsc);
+    
+        return () => {
+            document.removeEventListener("keydown", handleEsc);
+        };
+    }, []);
+    
+
     const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
 
     return (
-        <div className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center">
-            <div className="w-full max-w-3xl bg-[#FEF9DC] rounded-2xl shadow-lg overflow-hidden relative z-40">
+        <div onClick={() => setViewProduct(false)} className="fixed inset-0 bg-black/50 z-40 h-screen flex items-center justify-center">
+            <div onClick={(e: React.MouseEvent) => e.stopPropagation()} className="w-full max-w-3xl bg-[#FEF9DC] max-h-[95%] overflow-y-auto rounded-2xl shadow-lg overflow-hidden relative z-40">
                 {/* Botão de Fechar */}
                 <button
                     onClick={() => setViewProduct(false)}
