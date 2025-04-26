@@ -18,8 +18,8 @@ export default function CarouselProducts({ title, products, setViewProduct, id }
         slides: { perView: 1, spacing: 10 },
         renderMode: "performance",
         breakpoints: {
-            "(min-width: 500px)": { slides: { perView: 2, spacing: 15 } },
-            "(min-width: 768px)": { slides: { perView: 3, spacing: 15 } },
+            "(min-width: 500px)": { slides: { perView: 3, spacing: 15 } },
+            "(min-width: 768px)": { slides: { perView: 4, spacing: 15 } },
         },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel);
@@ -36,7 +36,7 @@ export default function CarouselProducts({ title, products, setViewProduct, id }
 
     return (
         <div id={id} className="w-full py-6 relative">
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-10 text-center">- {title} -</h2>
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8 text-center">{title}</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.products.map((product: any) => (
                     <div key={product.id} className="keen-slider__slide p-4">

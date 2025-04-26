@@ -14,21 +14,35 @@ import CarouselProducts from "@/components/CarouselProducts";
 import sofas from "@/data/sofasCouro.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
 import paineis from "@/data/paineis.json";
-
+import iconWhats from "@/assets/images/icon-whatsapp.png";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [viewProduct, setViewProduct]:any = useState(false);
+  const [viewProduct, setViewProduct]: any = useState(false);
+
+  const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico!`;
 
   return (
     <div className="w-full relative">
-      {/* <Middlebar className="quomodo-shop-middle-bar lg:block hidden" /> */}
       {viewProduct && (
         <div className="fixed inset-0 bg-black/50 z-40">
           <ViewProduct viewProduct={viewProduct} setViewProduct={setViewProduct} />
         </div>
       )}
+
+      <div className="fixed bottom-2 right-2 z-50">
+        <a
+          href={whatsappLink}
+          target="_blank"
+          id="contatoProduto"
+          rel="noopener noreferrer"
+          className="px-2 py-1 flex bg-red-800 text-white justify-center items-center gap-2 rounded-lg font-semibold hover:bg-red-900 transition"
+        >
+          <p className="text-white! leading-4">Procura algo específico?</p>
+          <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
+        </a>
+      </div>
 
       <Image
         className="w-full h-auto mask-fade-sides object-cover xl:px-20 hidden md:block"
@@ -46,13 +60,10 @@ export default function Home() {
       />
       <div className="px-4 lg:px-20 2xl:px-40 backdrop-blur-xl mask-fade-circle">
         <div className="my-12">
-          <Specialties />
-        </div>
-        <div className="my-12">
           <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofas} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
-          <InstaFeed />
+          <Specialties />
         </div>
         <div className="my-12">
           <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
@@ -60,8 +71,22 @@ export default function Home() {
         <div className="my-12">
           <CarouselProducts id={"paineis"} title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
         </div>
-        <div className="my-32">
+        <div className="my-20">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            id="contatoProduto"
+            rel="noopener noreferrer"
+            className="p-2 flex bg-red-800 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
+          >
+            <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
+          </a>
+        </div>
+        <div className="my-12">
           <AboutUs />
+        </div>
+        <div className="my-12">
+          <InstaFeed />
         </div>
         <div className="my-12">
           <Testimonials />

@@ -79,9 +79,9 @@ export default function Specialties() {
               </div>
             </div>
             <div className="item max-w-[280px] xl:max-w-[340px]">
-              <div className="flex space-x-5 2xl:space-x-7 items-center">
+              <div className="flex space-x-3 2xl:space-x-7 items-center">
                 <div>
-                  <Image src={iconeSofa} className="w-16 lg:w-28" alt="ícone sofá personaizável" />
+                  <Image src={iconeSofa} className="w-20 lg:w-28" alt="ícone sofá personaizável" />
                 </div>
                 <div className="">
                   <h2 className="text-[15px] 2xl:text-lg font-700 tracking-wide leading-4 mb-1">

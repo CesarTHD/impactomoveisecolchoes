@@ -36,14 +36,14 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                 setViewProduct(false);
             }
         };
-    
+
         document.addEventListener("keydown", handleEsc);
-    
+
         return () => {
             document.removeEventListener("keydown", handleEsc);
         };
     }, []);
-    
+
 
     const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
 
@@ -96,8 +96,20 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                     </button>
                 </div>
                 {/* Informações do produto */}
-                <div className="p-5">
-                    <h2 className="text-xl font-bold">{viewProduct.name}</h2>
+                <div className="px-5 py-2">
+                    <div className="flex justify-between">
+                        <h2 className="text-xl font-bold">{viewProduct.name}</h2>
+                        <a
+                            href={whatsappLink}
+                            target="_blank"
+                            id="contatoProduto"
+                            rel="noopener noreferrer"
+                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition"
+                        >
+                            <p className="text-white! leading-4">Solicitar Orçamento</p>
+                            <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
+                        </a>
+                    </div>
                     <p className="mt-2">{viewProduct.description}</p>
 
                     <ul className="list-disc px-10 mt-4">
@@ -106,17 +118,6 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                         ))}
                     </ul>
                     <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida e o material ideais para você.</p>
-                    {/* Botão de orçamento */}
-                    <a
-                        href={whatsappLink}
-                        target="_blank"
-                        id="contatoProduto"
-                        rel="noopener noreferrer"
-                        className="mt-4 flex bg-red-800 text-white justify-center gap-4 py-2 rounded-lg font-semibold hover:bg-red-900 transition"
-                    >
-                        <p className="text-white!">Solicitar Orçamento</p>
-                        <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
-                    </a>
                 </div>
             </div>
         </div>
