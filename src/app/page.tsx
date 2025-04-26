@@ -21,7 +21,7 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [viewProduct, setViewProduct]: any = useState(false);
 
-  const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico!`;
+  const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.`;
 
   return (
     <div className="w-full relative">
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="fixed bottom-2 right-2 z-50">
+      <div className="fixed bottom-4 right-2 z-50">
         <a
           href={whatsappLink}
           target="_blank"
