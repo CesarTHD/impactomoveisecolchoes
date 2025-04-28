@@ -1,0 +1,181 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Paris Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/paris.png",
+        "/assets/images/sofas-tecido/paris-e.png"
+      ],
+      "items": [
+        "Assento em espuma D28",
+        "Catraca reclinável em 3 estágios",
+        "Almofadas soltas em fibra siliconada",
+        "Estrutura em madeira de eucalipto",
+        "Pés de madeira maciça",
+        "Assento com molas"
+      ],
+      "description": "O Sofá Paris combina o charme clássico com conforto moderno. Seu acabamento e sua estrutura reforçada garantem durabilidade e elegância para sua sala de estar."
+    },
+    {
+      "id": 2,
+      "name": "Berlin Estofado com Chaise",
+      "images": [
+        "/assets/images/sofas-tecido/berlin.png",
+        "/assets/images/sofas-tecido/berlin-e.png"
+      ],
+      "items": [
+        "Catraca reclinável em 3 estágios",
+        "Assento em molas bonnel",
+        "Encosto com almofadas de fibra siliconada",
+        "Estrutura em madeira tratada",
+        "Pés em madeira maciça"
+      ],
+      "description": "Inspirado no design europeu, o Sofá Berlin traz linhas retas e um visual sofisticado. Ideal para ambientes contemporâneos que buscam conforto e estilo."
+    },
+    {
+      "id": 3,
+      "name": "California Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/california.png",
+        "/assets/images/sofas-tecido/california-e.png"
+      ],
+      "items": [
+        "Assento retrátil manual",
+        "Encosto reclinável em 6 estágios",
+        "Espuma D28 e Soft",
+        "Estrutura em madeira de reflorestamento",
+        "Molas Bonnel"
+      ],
+      "description": "O Sofá California é perfeito para momentos de relaxamento. Com mecanismo retrátil e reclinável, une versatilidade ao requinte das almofadas siliconadas."
+    },
+    {
+      "id": 4,
+      "name": "Tóquio Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/toquio.png",
+        "/assets/images/sofas-tecido/toquio-e.png"
+      ],
+      "items": [
+        "Catraca reclinável em 3 estágios",
+        "Assento em espuma D28 Soft",
+        "Encosto em almofadas de fibra siliconada",
+        "Estrutura em madeira de eucalipto",
+        "Design contemporâneo"
+      ],
+      "description": "O Sofá Tóquio oferece máximo aconchego sem abrir mão da elegância. Ideal para quem busca um ambiente acolhedor e moderno ao mesmo tempo."
+    },
+    {
+      "id": 5,
+      "name": "Dallas Modulado",
+      "images": [
+        "/assets/images/sofas-tecido/dallas.png",
+        "/assets/images/sofas-tecido/dallas-e.png"
+      ],
+      "items": [
+        "Módulos retráteis",
+        "Assento com espuma D28",
+        "Encosto com almofadas removíveis",
+        "Estrutura de madeira reflorestada",
+        "Pés em madeira natural"
+      ],
+      "description": "Com linhas marcantes e conforto excepcional, o Sofá Dallas traz robustez aliada à beleza da madeira de origem sustentável."
+    },
+    {
+      "id": 6,
+      "name": "Veneza Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/veneza.png",
+        "/assets/images/sofas-tecido/veneza-e.png"
+      ],
+      "items": [
+        "Revestimento em tecido e couro",
+        "Encosto reclinável em 3 estágios",
+        "Assento em espuma de alta densidade",
+        "Estrutura em madeira maciça",
+        "Pés de madeira maciça"
+      ],
+      "description": "Elegante e versátil, o Sofá Veneza é perfeito para ambientes modernos. Seu couro premium e sua estrutura sólida garantem anos de conforto e estilo."
+    },
+    {
+      "id": 7,
+      "name": "Dublin Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/dublin.png",
+        "/assets/images/sofas-tecido/dublin-e.png"
+      ],
+      "items": [
+        "Assento em espuma D28 Soft",
+        "Encosto com almofadas soltas",
+        "Estrutura reforçada em madeira de eucalipto",
+        "Base em Aço Carbono",
+        "Braços parafusados"
+      ],
+      "description": "Com design sofisticado e materiais de primeira, o Sofá Dublin proporciona conforto superior e estilo marcante para seu espaço."
+    },
+    {
+      "id": 8,
+      "name": "Líbano Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/libano.png",
+        "/assets/images/sofas-tecido/libano-e.png"
+      ],
+      "items": [
+        "Encosto reclinável em 6 estágios",
+        "Assento retrátil",
+        "Espuma D28 Soft",
+        "Estrutura em madeira de reflorestamento",
+        "Pés em madeira maciça"
+      ],
+      "description": "O Sofá Líbano traz versatilidade para o seu lar, com movimentos retráteis e reclináveis que garantem conforto ajustável e máximo aproveitamento do espaço."
+    },
+    {
+      "id": 9,
+      "name": "Madri Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/madri.png",
+        "/assets/images/sofas-tecido/madri-e.png"
+      ],
+      "items": [
+        "Catraca reclinável em 3 estágios",
+        "Assento em espuma D28 Soft",
+        "Encosto com almofadas soltas",
+        "Espuma de alta performance",
+        "Pés de madeira maciça"
+      ],
+      "description": "O Sofá Madri é a escolha ideal para quem busca elegância atemporal. Seu acabamento refinado e sua estrutura resistente traduzem qualidade e bom gosto."
+    },
+    {
+      "id": 10,
+      "name": "Munique Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/munique.png",
+        "/assets/images/sofas-tecido/munique-e.png"
+      ],
+      "items": [
+        "Assento com espuma D28",
+        "Encosto reclinável com catraca em 3 estágios",
+        "Estrutura em madeira certificada",
+        "Rodízios de silicone",
+        "Pés em madeira maciça"
+      ],
+      "description": "Inspirado na elegância europeia, o Sofá Munique combina funcionalidade com alto padrão de qualidade, trazendo beleza e conforto para seu ambiente."
+    },
+    {
+      "id": 10,
+      "name": "Atlanta Retrátil e Reclinável",
+      "images": [
+        "/assets/images/sofas-tecido/atlanta.png",
+        "/assets/images/sofas-tecido/atlanta-e.png"
+      ],
+      "items": [
+        "Assento com espuma D28 envolvida em manta siliconada",
+        "Almofadas de fibra siliconada",
+        "Estrutura em madeira certificada",
+        "Pillow 10 centímetros",
+        "Pés em madeira maciça"
+      ],
+      "description": "O Sofá Atlanta combina funcionalidade com alto padrão de qualidade, trazendo beleza e conforto para seu ambiente."
+    }
+  ]
+}

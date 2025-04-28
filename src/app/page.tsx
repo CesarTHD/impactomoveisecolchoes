@@ -11,7 +11,8 @@ import InstaFeed from "@/components/InstaFeed";
 import Testimonials from "@/components/Testimonials";
 import ViewProduct from "@/components/ViewProduct";
 import CarouselProducts from "@/components/CarouselProducts";
-import sofas from "@/data/sofasCouro.json";
+import sofasCouro from "@/data/sofasCouro.json";
+import retrateis from "@/data/retrateis.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
 import paineis from "@/data/paineis.json";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
@@ -60,7 +61,10 @@ export default function Home() {
       />
       <div className="px-4 lg:px-20 2xl:px-40 backdrop-blur-xl mask-fade-circle">
         <div className="my-12">
-          <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofas} setViewProduct={setViewProduct} />
+          <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
+        </div>
+        <div className="my-12">
+          <CarouselProducts id={"retrateis"} title={"Retráteis e Reclináveis"} products={retrateis} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
           <Specialties />
