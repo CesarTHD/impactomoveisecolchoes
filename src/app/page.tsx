@@ -35,7 +35,7 @@ export default function Home() {
         <a
           href={whatsappLink}
           target="_blank"
-          id="contatoProduto"
+          id="contatoEspecifico"
           rel="noopener noreferrer"
           className="px-2 py-1 flex bg-red-800 text-white justify-center items-center gap-2 rounded-lg font-semibold hover:bg-red-900 transition"
         >
@@ -75,7 +75,7 @@ export default function Home() {
           <a
             href={whatsappLink}
             target="_blank"
-            id="contatoProduto"
+            id="contatoEspecifico"
             rel="noopener noreferrer"
             className="p-2 flex bg-red-800 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
           >
