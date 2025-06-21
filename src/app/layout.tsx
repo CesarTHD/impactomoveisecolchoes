@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Impacto Móveis",
   description: "Loja de móveis que atende a região de Brasília e seu entorno.",
   icons: {
-    icon: "/ic-logo.png"
+    icon: "/logo-impacto.jpg"
   }
 };
 
