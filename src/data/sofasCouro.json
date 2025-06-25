@@ -34,6 +34,23 @@
       "description": "Elegância e conforto definem o Sofá Florença. Seu design refinado e materiais nobres oferecem um toque de luxo sustentável para sua casa, com estrutura em madeira de reflorestamento que respeita o meio ambiente."
     },
     {
+      "id": 8,
+      "name": "Sofá Turim",
+      "images": [
+        "/assets/images/sofas-couro/turim.png",
+        "/assets/images/sofas-couro/turim-e.png"
+      ],
+      "items": [
+        "Assentos Fixos",
+        "Percintas elásticas",
+        "Encosto com almofadas removíveis",
+        "Revestimento em couro legítimo",
+        "Fibras siliconadas",
+        "Pés cantoneira em madeira"
+      ],
+      "description": "Elegância e conforto definem o Sofá Turim. Seu design refinado e materiais nobres oferecem um toque de luxo sustentável para sua casa, com estrutura em madeira de reflorestamento que respeita o meio ambiente."
+    },
+    {
       "id": 3,
       "name": "Dollaro Retrátil e Reclinável",
       "images": [
