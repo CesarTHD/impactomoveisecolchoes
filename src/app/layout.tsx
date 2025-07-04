@@ -69,7 +69,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            <!-- Facebook Pixel Code -->
             <script>
             !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -84,8 +83,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
             <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=620452886117441&ev=PageView&noscript=1"
             /></noscript>
-            <!-- DO NOT MODIFY -->
-            <!-- End Facebook Pixel Code -->
           `,
           }}
         />
@@ -95,6 +92,14 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
       <body
         className={``}
       >
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH6XL662"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    `,
+          }}
+        />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
