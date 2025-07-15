@@ -32,6 +32,7 @@ export default function FloatingMenu() {
                             <a
                                 key={opt.query}
                                 href={createLink("")}
+                                id="contatoEspecifico"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
@@ -43,6 +44,7 @@ export default function FloatingMenu() {
                             <a
                                 key={opt.query}
                                 href={createLink(opt.label)}
+                                id="contatoEspecifico"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
