@@ -16,6 +16,7 @@ import retrateis from "@/data/retrateis.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
 import paineis from "@/data/paineis.json";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
+import FloatingMenu from "@/components/floatingMenu";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -32,7 +33,9 @@ export default function Home() {
         </div>
       )}
 
-      <div className="fixed bottom-4 right-2 z-50">
+      <FloatingMenu />
+
+      {/* <div className="fixed bottom-4 right-2 z-50">
         <a
           href={whatsappLink}
           target="_blank"
@@ -43,7 +46,7 @@ export default function Home() {
           <p className="text-white! leading-4">Procura algo específico?</p>
           <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
         </a>
-      </div>
+      </div> */}
 
       <Image
         className="w-full h-auto mask-fade-sides object-cover xl:px-20 hidden md:block"
