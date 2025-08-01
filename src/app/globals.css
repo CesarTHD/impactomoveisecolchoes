@@ -27,7 +27,8 @@ p {
 }
 
 .bg-components {
-    background-color: #FEF9DC;
+    /* background-color: #FEF9DC; */
+    background-color: #fffef6;
 }
 .bg-background-insta {
     background: linear-gradient(35deg, #5f0305 30%, #ffabad 80%) fixed;
