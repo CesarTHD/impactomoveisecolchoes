@@ -89,17 +89,17 @@ export default function Home() {
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </a>
         </div>
-        <div className="my-12">
+        <div className="my-36">
           <AboutUs />
         </div>
         <div className="my-12">
+          <Location />
+        </div>
+        <div className="my-24">
           <InstaFeed />
         </div>
-        <div className="my-12">
+        <div className="my-36">
           <Testimonials />
-        </div>
-        <div className="mt-36 mb-60">
-          <Location />
         </div>
       </div>
       <Footer />
