@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import PixelTracker from "@/components/pixelTracker";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Impacto Móveis",
@@ -92,7 +93,9 @@ export default function RootLayout({
         />
 
         {/* Rastreador de conversões */}
-        <PixelTracker />
+        <Suspense fallback={null}>
+          <PixelTracker />
+        </Suspense>
 
         {children}
         <Analytics />
