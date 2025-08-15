@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import Specialties from "@/components/Specialties"
 import Image from "next/image";
@@ -24,7 +24,7 @@ export default function Home() {
   const [viewProduct, setViewProduct]: any = useState(false);
 
   const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.`;
-
+  
   return (
     <div className="w-full relative">
       {viewProduct && (
