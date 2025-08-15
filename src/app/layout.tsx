@@ -92,10 +92,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
           }}
         />
 
-        {/* Rastreador de conversões
+        {/* Rastreador de conversões */}
         <Suspense fallback={null}>
           <PixelTracker />
-        </Suspense> */}
+        </Suspense>
 
         {children}
         <Analytics />
