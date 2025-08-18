@@ -1,17 +1,23 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void;
+  }
+}
 
 export default function PixelTracker() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "PageView");
+    if (typeof window.fbq !== "undefined") {
+      window.fbq("track", "PageView");
+      console.log("Meta Pixel PageView disparado:", pathname);
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return null;
 }
