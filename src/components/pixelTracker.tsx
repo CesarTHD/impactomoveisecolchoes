@@ -3,6 +3,13 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
+// 👇 Declara o fbq no escopo global
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void;
+  }
+}
+
 export default function PixelTracker() {
   const pathname = usePathname();
 
@@ -10,6 +17,7 @@ export default function PixelTracker() {
     // Dispara Pixel no client
     if (typeof window.fbq !== "undefined") {
       window.fbq("track", "PageView");
+      console.log("Meta Pixel PageView disparado:", pathname);
     }
 
     // Dispara API (server-side)
@@ -20,8 +28,8 @@ export default function PixelTracker() {
       },
       body: JSON.stringify({
         event_name: "PageView",
-        event_id: `pageview-${pathname}`, // ID para deduplicação
-        user_data: {}, // aqui você pode mandar infos hashed (ex: email, IP)
+        event_id: `pageview-${pathname}`, // deduplicação
+        user_data: {}, // pode incluir email/telefone hashed depois
       }),
     });
   }, [pathname]);
