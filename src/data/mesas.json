@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mesa Veneza",
+      "images": [
+        "/assets/images/mesas/veneza.png",
+        "/assets/images/mesas/veneza-e.png"
+      ],
+      "items": [
+        "Base em Madeira Maciça",
+        "Tampo em Vidro",
+        "Escolha o Material e a Cor do Tampo",
+        "Escolha o Tamanho",
+        "Escolha a Cadeira Desejada"
+      ],
+      "description": "Feita em madeira maciça de reflorestamento, escolha a medida ideal e faça um orçamento personalizado. Monte sua mesa como desejar, escolha cor, tamanho e cadeiras da sua escolha."
+    },
+    {
+      "id": 2,
+      "name": "Mesa Belgica",
+      "images": [
+        "/assets/images/mesas/belgica.png",
+        "/assets/images/mesas/belgica-e.png"
+      ],
+      "items": [
+        "Base em Madeira Maciça",
+        "Tampo Redondo em Vidro",
+        "Escolha o Material e a Cor do Tampo",
+        "Escolha o Tamanho",
+        "Escolha a Cadeira Desejada"
+      ],
+      "description": "Feita em madeira maciça de reflorestamento, escolha a medida ideal e faça um orçamento personalizado. Monte sua mesa como desejar, escolha cor, tamanho e cadeiras da sua escolha."
+    },
+    {
+      "id": 3,
+      "name": "Mesa London",
+      "images": [
+        "/assets/images/mesas/london.png",
+        "/assets/images/mesas/london-e.png"
+      ],
+      "items": [
+        "Base em Madeira Maciça",
+        "Tampo em Madeira Maciça",
+        "Escolha o Material e a Cor do Tampo",
+        "Escolha o Tamanho",
+        "Escolha a Cadeira Desejada"
+      ],
+      "description": "Feita em madeira maciça de reflorestamento, escolha a medida ideal e faça um orçamento personalizado. Monte sua mesa como desejar, escolha cor, tamanho e cadeiras da sua escolha."
+    },
+    {
+      "id": 4,
+      "name": "Mesa Piramide",
+      "images": [
+        "/assets/images/mesas/piramide.png",
+        "/assets/images/mesas/piramide-e.png"
+      ],
+      "items": [
+        "Base em Madeira Maciça",
+        "Tampo em Vidro Preto",
+        "Escolha o Material e a Cor do Tampo",
+        "Escolha o Tamanho",
+        "Escolha a Cadeira Desejada"
+      ],
+      "description": "Feita em madeira maciça de reflorestamento, escolha a medida ideal e faça um orçamento personalizado. Monte sua mesa como desejar, escolha cor, tamanho e cadeiras da sua escolha."
+    },
+    {
+      "id": 5,
+      "name": "Mesa Sofia",
+      "images": [
+        "/assets/images/mesas/sofia.png",
+        "/assets/images/mesas/sofia-e.png"
+      ],
+      "items": [
+        "Base em Madeira Maciça",
+        "Tampo em Vidro Branco",
+        "Escolha o Material e a Cor do Tampo",
+        "Escolha o Tamanho",
+        "Escolha a Cadeira Desejada"
+      ],
+      "description": "Feita em madeira maciça de reflorestamento, escolha a medida ideal e faça um orçamento personalizado. Monte sua mesa como desejar, escolha cor, tamanho e cadeiras da sua escolha."
+    }
+  ]
+}

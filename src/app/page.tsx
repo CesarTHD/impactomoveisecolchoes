@@ -14,6 +14,7 @@ import CarouselProducts from "@/components/CarouselProducts";
 import sofasCouro from "@/data/sofasCouro.json";
 import retrateis from "@/data/retrateis.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
+import mesas from "@/data/mesas.json";
 import paineis from "@/data/paineis.json";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
 import FloatingMenu from "@/components/floatingMenu";
@@ -73,6 +74,12 @@ export default function Home() {
           <Specialties />
         </div>
         <div className="my-12">
+          <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
+        </div>
+        <div className="my-36">
+          <Testimonials />
+        </div>
+        <div className="my-12">
           <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
@@ -97,9 +104,6 @@ export default function Home() {
         </div>
         <div className="my-24">
           <InstaFeed />
-        </div>
-        <div className="my-36">
-          <Testimonials />
         </div>
       </div>
       <Footer />
