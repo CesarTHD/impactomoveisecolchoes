@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Poltrona Belissima",
+      "images": ["/assets/images/poltronas-tecido/belissima.png"],
+      "items": ["Revestimento em tecido", "Assentos em Almofadas com Espuma D-23", "Enconsto e assento removíveis", "Estrutura em madeira de eucalipto", "Percintas Elásticas"],
+      "description": "Design clássico com toque de elegância. A Belíssima apresenta um acabamento sofisticado em tecido, perfeita para ambientes refinados que valorizam conforto e tradição."
+    },
+    {
+      "id": 2,
+      "name": "Poltrona Califórnia",
+      "images": ["/assets/images/poltronas-tecido/california.png"],
+      "items": ["Assento com espuma D-26", "Percintas Elásticas e Molas", "Encosto com almofadas 100% de fibra siliconada", "Braços e Pernas Embutidos com Design Futurístico"],
+      "description": "Conforto e tecnologia em um só modelo. A Califórnia combina o luxo do futurismo com um material de muito conforto, ideal para quem busca relaxamento com estilo."
+    },
+    {
+      "id": 3,
+      "name": "Poltrona Costela",
+      "images": ["/assets/images/poltronas-tecido/costela.png"],
+      "items": ["Estrutura em Ferro com Madeira Laminada", "Revestimento em tecido premium com botões", "Puff para descanso de pernas", "Fibra 100% siliconada"],
+      "description": "A Costela é a escolha perfeita para quem deseja sofisticação e muito conforto no mesmo móvel. Com Puff para descanso de pernas, ela se torna a poltrona ideal para leitura e descanso."
+    },
+    {
+      "id": 4,
+      "name": "Poltrona Itália",
+      "images": ["/assets/images/poltronas-tecido/italia.png"],
+      "items": ["Assento em Empuma D-26", "Encosto em Espuma D-23", "Assento e Encosto Fixos com Percintas Elásticas", "Estrutura em madeira de eucalipto"],
+      "description": "Inspirada no estilo minimalista, a Itália encanta com suas linhas clássicas que remete ao conforto, unindo sofisticação e simplicidade em uma só peça."
+    },
+    {
+      "id": 5,
+      "name": "Poltrona Maisa",
+      "images": ["/assets/images/poltronas-tecido/maisa.png"],
+      "items": ["Encosto com Almofadas Soltas 100% Fibras Siliconadas", "Assentos Fixos com Espuma D-26", "Estrutura em madeira de eucalipto tratado", "Braços com Acabamento em Cordas Náuticas"],
+      "description": "Uma combinação moderna e robusta. A poltrona Maisa traz personalidade e conforto, com estrutura em madeira de eucalipto tratado e cordas náuticas que garantem um toque clássico elegante."
+    }
+  ]
+}

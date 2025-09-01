@@ -14,6 +14,7 @@ import CarouselProducts from "@/components/CarouselProducts";
 import sofasCouro from "@/data/sofasCouro.json";
 import retrateis from "@/data/retrateis.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
+import poltronasTecido from "@/data/poltronasTecido.json";
 import mesas from "@/data/mesas.json";
 import paineis from "@/data/paineis.json";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
@@ -75,6 +76,9 @@ export default function Home() {
         </div>
         <div className="my-12">
           <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
+        </div>
+        <div className="my-12">
+          <CarouselProducts id={"poltronas-tecido"} title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
         </div>
         <div className="my-36">
           <Testimonials />
