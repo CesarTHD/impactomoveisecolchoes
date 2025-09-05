@@ -12,7 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import ViewProduct from "@/components/ViewProduct";
 import CarouselProducts from "@/components/CarouselProducts";
 import sofasCouro from "@/data/sofasCouro.json";
-import retrateis from "@/data/retrateis.json";
+import retrateis from "@/data/retrateisSemCaixa.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
 import poltronasTecido from "@/data/poltronasTecido.json";
 import mesas from "@/data/mesas.json";
@@ -66,7 +66,7 @@ export default function Home() {
       />
       <div className="px-4 lg:px-20 2xl:px-40 backdrop-blur-xl mask-fade-circle">
         <div className="my-12">
-          <CarouselProducts id={"retrateis"} title={"Retráteis e Reclináveis"} products={retrateis} setViewProduct={setViewProduct} />
+          <CarouselProducts id={"retrateis"} title={"Retráteis Sem Caixa"} products={retrateis} setViewProduct={setViewProduct} />
         </div>
         <div className="my-12">
           <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
