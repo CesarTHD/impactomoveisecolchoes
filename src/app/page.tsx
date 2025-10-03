@@ -13,6 +13,7 @@ import ViewProduct from "@/components/ViewProduct";
 import CarouselProducts from "@/components/CarouselProducts";
 import sofasCouro from "@/data/sofasCouro.json";
 import caixaZero from "@/data/retrateisSemCaixa.json";
+import sofasCamas from "@/data/sofasCamas.json";
 import poltronasCouro from "@/data/poltronasCouro.json";
 import poltronasTecido from "@/data/poltronasTecido.json";
 import mesas from "@/data/mesas.json";
@@ -65,6 +66,9 @@ export default function Home() {
         alt="Banner Impacto Móveis"
       />
       <div className="px-4 lg:px-20 2xl:px-40 backdrop-blur-xl mask-fade-circle">
+        <div className="my-12">
+          <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
+        </div>
         <div className="my-12">
           <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
         </div>

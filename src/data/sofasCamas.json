@@ -1,0 +1,173 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sofá cama Búzios com baú",
+      "images": [
+        "/assets/images/sofa-cama/buzios-bau-e.png",
+        "/assets/images/sofa-cama/buzios-bau.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Pistão para erguer o sofá-cama e abrir o baú",
+        "Percinta elástica italiana"
+      ],
+      "description": "O Sofá cama Búzios oferece praticidade com baú integrado e sistema de pistão. Conforto e funcionalidade em um só móvel. Peça Sob Medida."
+    },
+    {
+      "id": 2,
+      "name": "Sofá cama Cannes",
+      "images": [
+        "/assets/images/sofa-cama/cannes.png",
+        "/assets/images/sofa-cama/cannes-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado"
+      ],
+      "description": "Com visual sofisticado, o Sofá cama Cannes combina conforto e elegância, ideal para ambientes modernos. Peça Sob Medida."
+    },
+    {
+      "id": 3,
+      "name": "Sofá cama Capri",
+      "images": [
+        "/assets/images/sofa-cama/capri.png",
+        "/assets/images/sofa-cama/capri-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado"
+      ],
+      "description": "O Sofá cama Capri é perfeito para quem busca versatilidade, conforto e estilo clássico em sua sala. Peça Sob Medida."
+    },
+    {
+      "id": 4,
+      "name": "Sofá cama Dallas",
+      "images": [
+        "/assets/images/sofa-cama/dallas.png",
+        "/assets/images/sofa-cama/dallas-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado",
+        "Design moderno",
+        "Linhas retas"
+      ],
+      "description": "Design contemporâneo e linhas retas tornam o Sofá cama Dallas a escolha perfeita para espaços sofisticados. Peça Sob Medida."
+    },
+    {
+      "id": 5,
+      "name": "Sofá cama Dominic",
+      "images": [
+        "/assets/images/sofa-cama/dominic.png",
+        "/assets/images/sofa-cama/dominic-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Madeira de eucalipto tratado",
+        "Rodízios",
+        "Design moderno",
+        "Aproveita muito espaço",
+        "Base extra para a parte da cama"
+      ],
+      "description": "Compacto e funcional, o Sofá cama Dominic aproveita cada espaço com praticidade e design moderno. Peça Sob Medida."
+    },
+    {
+      "id": 6,
+      "name": "Sofá cama Firenze",
+      "images": [
+        "/assets/images/sofa-cama/firenze.png",
+        "/assets/images/sofa-cama/firenze-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado",
+        "Cinto com fivela",
+        "Braços finos revestidos em couro"
+      ],
+      "description": "O Sofá cama Firenze alia sofisticação ao conforto, com detalhes em couro e design diferenciado. Peça Sob Medida."
+    },
+    {
+      "id": 7,
+      "name": "Sofá cama Ipanema com baú",
+      "images": [
+        "/assets/images/sofa-cama/ipanema-bau-e.png",
+        "/assets/images/sofa-cama/ipanema-bau.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado",
+        "Baú com forro",
+        "Pistão de elevação",
+        "Braços finos revestidos em couro"
+      ],
+      "description": "O Sofá cama Ipanema com baú é sinônimo de praticidade, com design elegante e amplo espaço interno. Peça Sob Medida."
+    },
+    {
+      "id": 8,
+      "name": "Sofá cama Nice",
+      "images": [
+        "/assets/images/sofa-cama/nice.png",
+        "/assets/images/sofa-cama/nice-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado"
+      ],
+      "description": "O Sofá cama Nice é versátil e confortável, ideal para quem busca funcionalidade com requinte. Peça Sob Medida."
+    },
+    {
+      "id": 9,
+      "name": "Sofá cama Noronha",
+      "images": [
+        "/assets/images/sofa-cama/noronha.png",
+        "/assets/images/sofa-cama/noronha-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Pés em madeira de eucalipto tratado",
+        "Braços revestidos em couro",
+        "Estilo clássico",
+        "Tecnologia de carregamento de celular (tomada USB)"
+      ],
+      "description": "Unindo tradição e inovação, o Sofá cama Noronha tem estilo clássico com carregador USB integrado. Peça Sob Medida."
+    },
+    {
+      "id": 10,
+      "name": "Sofá cama Premium",
+      "images": [
+        "/assets/images/sofa-cama/premium.png",
+        "/assets/images/sofa-cama/premium-e.png"
+      ],
+      "items": [
+        "Espuma D26",
+        "Molas espiral 10 cm",
+        "Percinta elástica italiana",
+        "Almofadas fibra siliconada",
+        "Madeira de eucalipto tratado"
+      ],
+      "description": "O Sofá cama Premium entrega máximo conforto e durabilidade, ideal para quem busca sofisticação. Peça Sob Medida."
+    }
+  ]
+}
