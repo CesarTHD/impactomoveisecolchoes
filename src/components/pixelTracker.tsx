@@ -17,7 +17,6 @@ export default function PixelTracker() {
     // Dispara Pixel no client
     if (typeof window.fbq !== "undefined") {
       window.fbq("track", "PageView");
-      console.log("Meta Pixel PageView disparado:", pathname);
     }
 
     // Dispara API (server-side)

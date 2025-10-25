@@ -39,7 +39,7 @@ export default function CarouselProducts({ title, products, setViewProduct, id }
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8 text-center">{title}</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.products.map((product: any) => (
-                    <div key={product.name} className="keen-slider__slide p-4">
+                    <div key={`${product.name}+'-'+${product.id}`} className="keen-slider__slide p-4">
                         <button onClick={() => setViewProduct(product)} className="w-full h-full border-red-500 shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
                             <Card className="cursor-pointer  h-full p-0 overflow-hidden relative">
                                 <CardContent className="flex flex-col items-center p-0 bg-components">

@@ -75,6 +75,17 @@ export default function Home() {
         <div className="my-12">
           <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
         </div>
+        <div className="my-20">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            id="contatoEspecifico"
+            rel="noopener noreferrer"
+            className="p-2 flex bg-red-800 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
+          >
+            <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
+          </a>
+        </div>
         <div className="my-12">
           <Specialties />
         </div>
