@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-// import banner from "@/assets/images/black-banner-desktop.png"; // 👉 substitua pela imagem da campanha Black November desktop
-// import bannerMobile from "@/assets/images/black-banner-mobile.png"; // 👉 substitua pela imagem da campanha mobile
+import banner from "@/assets/images/black-banner.png";
+import bannerMobile from "@/assets/images/black-banner-mobile.png";
 import CarouselProducts from "@/components/CarouselProducts";
 import sofasCouro from "@/data/sofasCouro.json";
 import mesas from "@/data/mesas.json";
@@ -25,26 +25,28 @@ export default function BlackNovember() {
 
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative bg-white">
       {/* <FloatingMenu /> */}
 
       {/* Banner principal */}
-      {/* <Image
-        className="w-full h-auto object-cover hidden md:block"
-        width={1440}
-        height={500}
-        src={banner}
-        alt="Promoção Black November Impacto Móveis"
-      />
+      <div className="">
+        <Image
+          className="w-full h-auto object-cover hidden md:block"
+          width={1440}
+          height={500}
+          src={banner}
+          alt="Promoção Black November Impacto Móveis"
+        />
+      </div>
       <Image
         className="w-full h-auto object-cover block md:hidden"
         width={1440}
         height={500}
         src={bannerMobile}
         alt="Promoção Black November Impacto Móveis"
-      /> */}
+      />
 
-      <section className="px-4 lg:px-20 2xl:px-40 my-16 text-center">
+      {/* <section className="px-4 lg:px-20 2xl:px-40 my-16 text-center">
         <h1 className="text-3xl md:text-5xl font-bold text-red-800 mb-6">
           🔥 Black November Impacto Móveis 🔥
         </h1>
@@ -63,7 +65,7 @@ export default function BlackNovember() {
             Quero Aproveitar Agora
           </button>
         </div>
-      </section>
+      </section> */}
 
       <section className="px-4 lg:px-20 2xl:px-40">
         <div className="my-20">
