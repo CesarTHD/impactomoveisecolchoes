@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Califórnia Retrátil",
+      "images": [
+        "/assets/images/black-november/california.jpeg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sofá Capri",
+      "images": [
+        "/assets/images/black-november/capri.jpeg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sofá Dubai",
+      "images": [
+        "/assets/images/black-november/dubai.jpeg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Retrátil Geórgia",
+      "images": [
+        "/assets/images/black-november/georgia.jpeg"
+      ]
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import Image from "next/image";
 import banner from "@/assets/images/black-banner.png";
 import bannerMobile from "@/assets/images/black-banner-mobile.png";
 import CarouselProducts from "@/components/CarouselProducts";
-import sofasCouro from "@/data/sofasCouro.json";
+import promocao from "@/data/promocao.json";
 import mesas from "@/data/mesas.json";
 import paineis from "@/data/paineis.json";
 import poltronasTecido from "@/data/poltronasTecido.json";
@@ -15,6 +15,7 @@ import Carousel from "@/components/Carousel";
 import ContactForm from "@/components/ContactForm";
 import Location from "@/components/Location";
 import Testimonials from "@/components/Testimonials";
+import CarouselExtended from "@/components/CarouselExtended";
 
 export default function BlackNovember() {
   // const [viewProduct, setViewProduct]: any = useState(false);
@@ -46,13 +47,13 @@ export default function BlackNovember() {
         alt="Promoção Black November Impacto Móveis"
       />
 
-      {/* <section className="px-4 lg:px-20 2xl:px-40 my-16 text-center">
+      <section className="px-4 lg:px-20 2xl:px-40 my-16 mt-24 text-center">
         <h1 className="text-3xl md:text-5xl font-bold text-red-800 mb-6">
           🔥 Black November Impacto Móveis 🔥
         </h1>
         <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed">
           É a maior queima de estoque do ano! Sofás, mesas, painéis e poltronas
-          com até <span className="font-bold text-red-700">50% de desconto</span>.
+          com até <span className="font-bold text-red-700">70% de desconto</span>.
           Aproveite para renovar seus ambientes com conforto e elegância —
           promoções válidas enquanto durarem os estoques!
         </p>
@@ -60,40 +61,19 @@ export default function BlackNovember() {
           <button
             onClick={() => setShowForm(true)}
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-red-800 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-900 transition cursor-pointer"
+            className="inline-flex items-center justify-center bg-red-800 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-900 transition cursor-pointer hover:scale-110"
           >
             Quero Aproveitar Agora
           </button>
         </div>
-      </section> */}
+      </section>
 
       <section className="px-4 lg:px-20 2xl:px-40">
         <div className="my-20">
-          <Carousel
+          <CarouselExtended
             id="sofas"
             title="Sofás em Promoção"
-            products={sofasCouro}
-          />
-        </div>
-        <div className="my-20">
-          <Carousel
-            id="mesas"
-            title="Mesas em Madeira Maciça"
-            products={mesas}
-          />
-        </div>
-        <div className="my-20">
-          <Carousel
-            id="paineis"
-            title="Painéis com Design Moderno"
-            products={paineis}
-          />
-        </div>
-        <div className="my-20">
-          <Carousel
-            id="poltronas"
-            title="Poltronas Confortáveis e Elegantes"
-            products={poltronasTecido}
+            products={promocao}
           />
         </div>
       </section>
@@ -109,7 +89,7 @@ export default function BlackNovember() {
         <button
           onClick={() => setShowForm(true)}
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-red-800 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-900 transition cursor-pointer"
+          className="inline-flex items-center justify-center bg-red-800 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-900 transition cursor-pointer hover:scale-110"
         >
           Falar com um Especialista
         </button>
@@ -119,7 +99,7 @@ export default function BlackNovember() {
         <Testimonials />
       </div>
 
-      <div className="my-12 p-32">
+      <div className="my-12">
         <Location />
       </div>
 
