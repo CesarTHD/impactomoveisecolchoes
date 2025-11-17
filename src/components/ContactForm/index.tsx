@@ -11,9 +11,7 @@ declare global {
 }
 
 
-export default function ContactForm({ showForm, setShowForm }: any) {
-  const searchParams = useSearchParams();
-  const gclid = searchParams?.get('gclid') ?? null;
+export default function ContactForm({ showForm, setShowForm, gclid }: any) {
 
   const [formData, setFormData] = useState({
     name: "",

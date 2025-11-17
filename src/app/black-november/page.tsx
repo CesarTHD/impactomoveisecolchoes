@@ -16,8 +16,12 @@ import ContactForm from "@/components/ContactForm";
 import Location from "@/components/Location";
 import Testimonials from "@/components/Testimonials";
 import CarouselExtended from "@/components/CarouselExtended";
+import { useSearchParams } from "next/navigation";
+
 
 export default function BlackNovember() {
+  const searchParams = useSearchParams();
+  const gclid = searchParams?.get('gclid') ?? null;
   // const [viewProduct, setViewProduct]: any = useState(false);
 
   const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Quero+aproveitar+a+promoção+de+Black+November+da+Impacto+Móveis!`;
@@ -100,12 +104,12 @@ export default function BlackNovember() {
           Falar com um Especialista
         </button>
       </section>
-      
+
       <div className="my-12">
         <Location />
       </div>
 
-      <ContactForm showForm={showForm} setShowForm={setShowForm} />
+      <ContactForm showForm={showForm} setShowForm={setShowForm} gclid={gclid} />
 
       <Footer />
     </div>
