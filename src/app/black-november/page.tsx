@@ -1,4 +1,7 @@
 "use client";
+
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
