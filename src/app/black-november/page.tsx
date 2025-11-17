@@ -47,6 +47,17 @@ export default function BlackNovember() {
         alt="Promoção Black November Impacto Móveis"
       />
 
+
+      <section className="px-4 lg:px-20 2xl:px-40">
+        <div className="my-20">
+          <CarouselExtended
+            id="sofas"
+            title="Sofás em Promoção"
+            products={promocao}
+          />
+        </div>
+      </section>
+
       <section className="px-4 lg:px-20 2xl:px-40 my-16 mt-24 text-center">
         <h1 className="text-3xl md:text-5xl font-bold text-red-800 mb-6">
           🔥 Black November Impacto Móveis 🔥
@@ -68,15 +79,10 @@ export default function BlackNovember() {
         </div>
       </section>
 
-      <section className="px-4 lg:px-20 2xl:px-40">
-        <div className="my-20">
-          <CarouselExtended
-            id="sofas"
-            title="Sofás em Promoção"
-            products={promocao}
-          />
-        </div>
-      </section>
+
+      <div className="my-36">
+        <Testimonials />
+      </div>
 
       <section className="px-4 lg:px-20 2xl:px-40 my-24 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
@@ -94,11 +100,7 @@ export default function BlackNovember() {
           Falar com um Especialista
         </button>
       </section>
-
-      <div className="my-36">
-        <Testimonials />
-      </div>
-
+      
       <div className="my-12">
         <Location />
       </div>

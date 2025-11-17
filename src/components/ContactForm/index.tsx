@@ -2,13 +2,39 @@
 import { useState } from "react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSearchParams } from 'next/navigation';
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 
 export default function ContactForm({ showForm, setShowForm }: any) {
+  const searchParams = useSearchParams();
+  const gclid = searchParams?.get('gclid') ?? null;
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     category: "",
   });
+
+
+  function gtag_report_conversion(url?: any) {
+    const callback = () => {
+      if (url) window.location = url;
+    };
+
+    window.gtag("event", "conversion", {
+      send_to: "AW-11017701907/lKecCMni7MEbEJOU04Up",
+      event_callback: callback,
+    });
+
+    return false;
+  }
+
 
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -51,13 +77,15 @@ export default function ContactForm({ showForm, setShowForm }: any) {
     setLoading(true);
 
     try {
-      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook-test/910cad48-67fa-4cc5-9fcf-b6de3932893b", {
+      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/910cad48-67fa-4cc5-9fcf-b6de3932893b", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, gclid }),
       });
 
       setSent(true);
+
+      gtag_report_conversion();
 
       setTimeout(() => {
         setShowForm(false);

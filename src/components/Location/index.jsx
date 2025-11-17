@@ -4,7 +4,7 @@ export default function Location() {
   return (
     <>
       <div className="flex flex-col items-center">
-        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold my-4">- Venha nos visitar -</h2>
+        <h2 className="text-3xl lg:text-3xl xl:text-4xl font-semibold my-4">Venha conferir de perto</h2>
         <div className="flex gap-2">
           📍
           <p className="text-sm">QNE 07 Lote 16 Loja 01 CEP: 72.125-070</p>
