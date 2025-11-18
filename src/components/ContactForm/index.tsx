@@ -130,6 +130,7 @@ export default function ContactForm({ showForm, setShowForm, gclid }: any) {
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <input
+                    id="name"
                     type="text"
                     name="name"
                     placeholder="Seu nome"
@@ -139,6 +140,7 @@ export default function ContactForm({ showForm, setShowForm, gclid }: any) {
                   />
 
                   <input
+                    id="phone"
                     type="tel"
                     name="phone"
                     placeholder="Seu WhatsApp"
@@ -148,6 +150,7 @@ export default function ContactForm({ showForm, setShowForm, gclid }: any) {
                   />
 
                   <select
+                  id="category"
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
