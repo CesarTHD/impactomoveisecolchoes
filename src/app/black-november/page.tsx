@@ -82,7 +82,7 @@ export default function BlackNovember() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-red-800 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-red-900 transition cursor-pointer hover:scale-110"
               >
-                Quero Aproveitar Agora
+                Quero um Orçamento Agora Mesmo
               </button>
             </div>
           </section>

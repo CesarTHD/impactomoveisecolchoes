@@ -150,11 +150,11 @@ export default function ContactForm({ showForm, setShowForm, gclid }: any) {
                   />
 
                   <select
-                  id="category"
+                    id="category"
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-red-700"
+                    className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 text-neutral-500"
                   >
                     <option value="">O que você está procurando?</option>
                     <option value="Sofá Retrátil">Sofá Retrátil</option>
@@ -173,7 +173,7 @@ export default function ContactForm({ showForm, setShowForm, gclid }: any) {
                     disabled={loading}
                     className="bg-red-800 text-white font-semibold py-3 rounded-lg hover:bg-red-900 transition cursor-pointer"
                   >
-                    {loading ? "Enviando..." : "Enviar"}
+                    {loading ? "Enviando..." : "Receber Orçamento Personalizado"}
                   </button>
                 </form>
               </>
