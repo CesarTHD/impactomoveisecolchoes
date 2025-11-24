@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from 'next/navigation';
@@ -11,14 +11,31 @@ declare global {
 }
 
 
-export default function ContactForm({ showForm, setShowForm, gclid }: any) {
+export default function ContactForm({ showForm, setShowForm }: any) {
+
+  const searchParams = useSearchParams();
+
+  const [gclid, setGclid] = useState<string | null>(null);
+
+  useEffect(() => {
+    const param = searchParams?.get("gclid");
+
+    if (param) {
+      localStorage.setItem("gclid", param);
+      setGclid(param);
+      return;
+    }
+    const stored = localStorage.getItem("gclid");
+    if (stored) {
+      setGclid(stored);
+    }
+  }, [searchParams]);
 
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     category: "",
   });
-
 
   function gtag_report_conversion(url?: any) {
     const callback = () => {
