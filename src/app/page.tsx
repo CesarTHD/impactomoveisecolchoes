@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import Specialties from "@/components/Specialties"
 import Image from "next/image";
-import banner from "@/assets/images/banner.png"
-import bannerMobile from "@/assets/images/banner-mobile.png"
+import banner from "@/assets/images/new_banner.png"
+import bannerMobile from "@/assets/images/new_banner_mobile.png"
 import AboutUs from "@/components/AboutUs";
 import Location from "@/components/Location";
 import InstaFeed from "@/components/InstaFeed";
@@ -27,7 +27,7 @@ export default function Home() {
   const [viewProduct, setViewProduct]: any = useState(false);
 
   const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.`;
-  
+
   return (
     <div className="w-full relative">
       {viewProduct && (
@@ -52,36 +52,53 @@ export default function Home() {
       </div> */}
 
       <Image
-        className="w-full h-auto mask-fade-sides object-cover xl:px-20 hidden md:block"
-        width={1440}
-        height={500}
+        className="w-full h-auto object-cover hidden md:block"
         src={banner}
         alt="Banner Impacto Móveis"
       />
       <Image
-        className="w-full h-auto mask-fade-sides object-cover xl:px-20 block md:hidden"
+        className="w-full h-auto object-cover xl:px-20 block md:hidden"
         width={1440}
         height={500}
         src={bannerMobile}
         alt="Banner Impacto Móveis"
       />
-      <div className="px-4 lg:px-20 2xl:px-40 backdrop-blur-xl mask-fade-circle">
-        <div className="my-12">
+
+      {/* <div className="flex justify-center p-12">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" className="size-8 text-red-800">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+        </svg>
+      </div> */}
+
+      <div className="backdrop-blur-xl mask-fade-circle">
+        <div className="py-22 xl:px-20  bg-[#fbfaeb]">
           <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
         </div>
-        <div className="my-12">
+        <div className="py-24 xl:px-20  bg-[#E7DBCF]">
           <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
         </div>
-        <div className="my-12">
-          <CarouselProducts id={"sofasCouro"} title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
+        <div className="py-24 xl:px-20 bg-[#452712]">
+          <CarouselProducts id={"sofasCouro"} color="text-gray-300!" title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
         </div>
-        <div className="my-20">
+        <div className="py-24 xl:px-20 bg-[#fbfaeb]">
+          <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
+        </div>
+        <div className="py-24 xl:px-20 bg-[#E7DBCF]">
+          <CarouselProducts id={"poltronas-tecido"} title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
+        </div>
+        <div className="py-24 xl:px-20 bg-[#452712]">
+          <CarouselProducts id={"paineis"} color="text-gray-300!" title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
+        </div>
+        <div className="my-36">
+          <Testimonials />
+        </div>
+        <div className="my-20 px-10">
           <a
             href={whatsappLink}
             target="_blank"
             id="contatoEspecifico"
             rel="noopener noreferrer"
-            className="p-2 flex bg-red-800 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
+            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
           >
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </a>
@@ -90,36 +107,24 @@ export default function Home() {
           <Specialties />
         </div>
         <div className="my-12">
-          <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
-        </div>
-        <div className="my-12">
-          <CarouselProducts id={"poltronas-tecido"} title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
-        </div>
-        <div className="my-36">
-          <Testimonials />
-        </div>
-        <div className="my-12">
           <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
         </div>
-        <div className="my-12">
-          <CarouselProducts id={"paineis"} title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
-        </div>
-        <div className="my-20">
+        <div className="my-20 px-10">
           <a
             href={whatsappLink}
             target="_blank"
             id="contatoEspecifico"
             rel="noopener noreferrer"
-            className="p-2 flex bg-red-800 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
+            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto"
           >
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </a>
         </div>
-        <div className="my-36">
-          <AboutUs />
-        </div>
         <div className="my-12">
           <Location />
+        </div>
+        <div className="my-36 px-8">
+          <AboutUs />
         </div>
         <div className="my-24">
           <InstaFeed />

@@ -38,9 +38,9 @@ const InstaFeed = () => {
                 </a>
 
                 <div className="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-2 xl:grid-cols-4">
-                    <FallingImage src={pub1} className="lg:pt-20" />
-                    <FallingImage src={pub2} />
-                    <FallingImage src={pub3} />
+                    <FallingImage src={pub3} className="lg:pt-20" />
+                    <FallingImage src={pub2} className="hidden md:block lg:pt-20" />
+                    <FallingImage src={pub1} className="hidden md:block lg:pt-20" />
                     <FallingImage src={pub4} className="hidden md:block lg:pt-20" />
                 </div>
             </div>

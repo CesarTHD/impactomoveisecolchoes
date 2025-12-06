@@ -7,9 +7,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
+import ContactForm from "../ContactForm";
 
-export default function CarouselProducts({ title, products, setViewProduct, id }: any) {
+export default function CarouselProducts({ title, products, setViewProduct, id, color }: any) {
     const router = useRouter();
+    const [showForm, setShowForm] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const [sliderRef, instanceRef] = useKeenSlider({
@@ -36,11 +38,11 @@ export default function CarouselProducts({ title, products, setViewProduct, id }
 
     return (
         <div id={id} className="w-full py-6 relative">
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8 text-center">{title}</h2>
+            <h2 className={`text-2xl lg:text-3xl xl:text-4xl font-semibold mb-16 text-center ${color}`}>{title}</h2>
             <div ref={sliderRef} className="keen-slider">
                 {products.products.map((product: any) => (
-                    <div key={`${product.name}+'-'+${product.id}`} className="keen-slider__slide p-4">
-                        <button onClick={() => setViewProduct(product)} className="w-full h-full border-red-500 shadow-md shadow-[#a49581] rounded-xl hover:scale-105 transition-transform duration-300">
+                    <div key={`${product.name}+'-'+${product.id}`} className="keen-slider__slide p-8">
+                        <button onClick={() => setViewProduct(product)} className="w-full h-full  rounded-xl hover:scale-105 transition-transform duration-300">
                             <Card className="cursor-pointer  h-full p-0 overflow-hidden relative">
                                 <CardContent className="flex flex-col items-center p-0 bg-components">
                                     <div className="relative w-full aspect-[16/10]">
@@ -71,11 +73,14 @@ export default function CarouselProducts({ title, products, setViewProduct, id }
             </button>
 
             {/* Indicadores */}
-            <div className="flex justify-center mt-4 space-x-2">
+            <div className="flex justify-center mt-14 space-x-2">
                 {products.products.map((_: any, index: number) => (
                     <button key={index} onClick={() => instanceRef.current?.moveToIdx(index)} className={`w-3 h-3 rounded-full ${currentSlide === index ? 'bg-gray-800' : 'bg-gray-400'}`} />
                 ))}
             </div>
+
+            {/* Modal com formulário */}
+            <ContactForm showForm={showForm} setShowForm={setShowForm} />
         </div>
     )
 }
