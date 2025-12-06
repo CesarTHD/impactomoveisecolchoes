@@ -91,10 +91,12 @@ export default function BlackNovember() {
           <Location />
         </div>
 
-        <ContactForm
-          showForm={showForm}
-          setShowForm={setShowForm}
-        />
+        <Suspense>
+          <ContactForm
+            showForm={showForm}
+            setShowForm={setShowForm}
+          />
+        </Suspense>
 
         <Footer />
       </div>

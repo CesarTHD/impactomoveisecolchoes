@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Card, CardContent } from "@/components/ui/card";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
 import ContactForm from "../ContactForm";
@@ -104,7 +104,9 @@ export default function CarouselExtended({ title, products, id }: any) {
             </div>
 
             {/* Modal com formulário */}
-            <ContactForm showForm={showForm} setShowForm={setShowForm} />
+            <Suspense>
+                <ContactForm showForm={showForm} setShowForm={setShowForm} />
+            </Suspense>
         </div>
     );
 }
