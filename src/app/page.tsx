@@ -71,6 +71,9 @@ export default function Home() {
       </div> */}
 
       <div className="backdrop-blur-xl mask-fade-circle">
+        <div className=" ">
+          <Specialties />
+        </div>
         <div className="py-22 xl:px-20  bg-[#fbfaeb]">
           <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
         </div>
@@ -92,7 +95,7 @@ export default function Home() {
         <div className="my-36">
           <Testimonials />
         </div>
-        <div className="my-20 px-10">
+        <div className="my-24 px-10">
           <a
             href={whatsappLink}
             target="_blank"
@@ -103,10 +106,7 @@ export default function Home() {
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </a>
         </div>
-        <div className="my-12">
-          <Specialties />
-        </div>
-        <div className="my-12">
+        <div className="py-24 xl:px-20 bg-[#E7DBCF]">
           <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
         </div>
         <div className="my-20 px-10">
@@ -123,7 +123,7 @@ export default function Home() {
         <div className="my-12">
           <Location />
         </div>
-        <div className="my-36 px-8">
+        <div className="my-18 px-8">
           <AboutUs />
         </div>
         <div className="my-24">
