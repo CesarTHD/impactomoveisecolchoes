@@ -71,10 +71,10 @@ export default function Home() {
       </div> */}
 
       <div className="backdrop-blur-xl mask-fade-circle">
-        <div className=" ">
+        <div className="bg-[#fbfaeb]">
           <Specialties />
         </div>
-        <div className="py-22 xl:px-20  bg-[#fbfaeb]">
+        <div className="py-22 xl:px-20  ">
           <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
         </div>
         <div className="py-24 xl:px-20  bg-[#E7DBCF]">

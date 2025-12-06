@@ -3,14 +3,16 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import iconWhats from "@/assets/images/icon-whatsapp.png";
+import ContactForm from "../ContactForm";
 
 const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [showForm, setShowForm] = useState(false);
 
     const [sliderRef, instanceRef] = useKeenSlider({
         loop: true,
@@ -44,8 +46,13 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
         };
     }, []);
 
-
-    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+    if (showForm) {
+        return (
+            <Suspense>
+                <ContactForm showForm={showForm} setShowForm={setShowForm} />
+            </Suspense>
+        );
+    }
 
     return (
         <div onClick={() => setViewProduct(false)} className="fixed inset-0 bg-black/50 z-40 h-screen flex items-center justify-center">
@@ -99,16 +106,14 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                 <div className="px-5 py-2">
                     <div className="flex justify-between">
                         <h2 className="text-xl font-bold">{viewProduct.name}</h2>
-                        <a
-                            href={whatsappLink}
-                            target="_blank"
-                            id="contatoProduto"
+                        <button
+                            onClick={() => setShowForm(true)}
                             rel="noopener noreferrer"
-                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition"
+                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
                         >
                             <p className="text-white! leading-4">Solicitar Orçamento</p>
                             <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
-                        </a>
+                        </button>
                     </div>
                     <p className="mt-2">{viewProduct.description}</p>
 

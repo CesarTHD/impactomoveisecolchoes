@@ -16,7 +16,7 @@ export default function Specialties() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="best-services w-full border-t-2 border-[#821317] bg-components shadow-xl shadow-[#dccdb8] gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center lg:h-[200px] px-8 lg:px-24 lg:py-0 py-10"
+            className="best-services w-full  shadow-lg shadow-[#dccdb8] gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center lg:h-[200px] px-8 lg:px-24 lg:py-0 py-10"
           >
             <div className="item max-w-[250px] lg:max-w-[250px] 2xl:max-w-[320px]">
               <div className="flex space-x-5 2xl:space-x-10 items-center">

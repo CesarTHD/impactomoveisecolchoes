@@ -141,8 +141,8 @@ export default function ContactForm({ showForm, setShowForm }: any) {
 
             {!sent ? (
               <>
-                <p className="text-center text-gray-700 mb-5 font-bold">
-                  Informe seus dados para receber descontos exclusivos de Black November 😉
+                <p className="text-center text-gray-700 mb-5 font-bold text-lg">
+                  Entraremos em contato em instantes para fazer um orçamento personalizado para você!😉
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
