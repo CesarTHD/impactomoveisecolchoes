@@ -55,34 +55,6 @@ export default function ContactForm({ showForm, setShowForm }: any) {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
 
-  // Máscara do telefone
-  // const normalizePhone = (raw: string) => {
-  //   let v = raw.replace(/\D/g, "");
-
-  //   // Remove 55 do início
-  //   if (v.startsWith("55")) {
-  //     v = v.slice(2);
-  //   }
-
-  //   // Se tiver menos que 11 dígitos, tentar completar
-  //   if (v.length >= 2) {
-  //     const ddd = v.slice(0, 2);
-  //     let number = v.slice(2);
-
-  //     // Garante o 9 no início do número
-  //     if (number.length >= 4 && !number.startsWith("9")) {
-  //       number = "9" + number;
-  //     }
-
-  //     v = ddd + number;
-  //   }
-
-  //   // Mantém no máximo 11 dígitos
-  //   v = v.slice(0, 15);
-
-  //   return v;
-  // };
-
   const formatPhoneForDisplay = (value: string) => {
     const v = value.replace(/\D/g, "");
 
@@ -90,15 +62,15 @@ export default function ContactForm({ showForm, setShowForm }: any) {
     if (v.length <= 7) return `${v.slice(0, 2)} ${v.slice(2)}`;
     if (v.length <= 11) return `${v.slice(0, 2)} ${v.slice(2, 7)}-${v.slice(7)}`;
 
-    return v; // valores maiores que 11 ficam brutos (sem cortar)
+    return v; 
   };
 
 
 
   const normalizeForSending = (raw: string) => {
-    let v = raw.replace(/\D/g, ""); // só números
+    let v = raw.replace(/\D/g, ""); 
 
-    // Remove 55 do início se existir
+    
     if (v.startsWith("55")) {
       v = v.slice(2);
     }
@@ -107,22 +79,22 @@ export default function ContactForm({ showForm, setShowForm }: any) {
     let number = "";
 
     if (v.length >= 11) {
-      // usuário digitou DDD + número completo
+      
       ddd = v.slice(0, 2);
       number = v.slice(2);
     } else if (v.length === 10) {
-      // DDD + número sem 9
+      
       ddd = v.slice(0, 2);
       number = v.slice(2);
       if (!number.startsWith("9")) number = "9" + number;
     } else {
-      // Usuário não digitou DDD
+      
       ddd = "61";
       number = v;
       if (!number.startsWith("9")) number = "9" + number;
     }
 
-    // Retorna telefone final com 11 dígitos
+    
     return (ddd + number).slice(0, 11);
   };
 
@@ -144,28 +116,48 @@ export default function ContactForm({ showForm, setShowForm }: any) {
     setFormData({ ...formData, [name]: value });
   };
 
-
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const normalized = normalizeForSending(formData.phone);
-
-    if (normalized.length !== 11) {
-      setError("Número inválido.");
+    if (!formData.name || !formData.phone) {
+      setError("Preencha todos os campos!");
       return;
     }
 
+    const normalized = normalizeForSending(formData.phone);
+    
+    
     const payload = {
       ...formData,
-      phone: normalized, // <-- aqui vai DDD + 9 + número
+      phone: normalized,
+      gclid,
     };
 
-    await fetch("/api/lead", {
-      method: "POST",
-      body: JSON.stringify(payload),
-    });
+    setError("");
+    setLoading(true);
+
+    try {
+      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/910cad48-67fa-4cc5-9fcf-b6de3932893b", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      setSent(true);
+
+      gtag_report_conversion();
+
+      setTimeout(() => {
+        setShowForm(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      setError("Erro ao enviar. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   };
+
 
 
 
