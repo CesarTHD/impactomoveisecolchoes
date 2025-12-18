@@ -74,11 +74,11 @@ export default function Home() {
         <div className="bg-[#fbfaeb]">
           <Specialties />
         </div>
-        <div className="py-22 xl:px-20  ">
-          <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
-        </div>
         <div className="py-24 xl:px-20  bg-[#E7DBCF]">
           <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
+        </div>
+        <div className="py-22 xl:px-20  ">
+          <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
         </div>
         <div className="py-24 xl:px-20 bg-[#452712]">
           <CarouselProducts id={"sofasCouro"} color="text-gray-300!" title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
