@@ -46,13 +46,15 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
         };
     }, []);
 
-    if (showForm) {
-        return (
-            <Suspense>
-                <ContactForm showForm={showForm} setShowForm={setShowForm} />
-            </Suspense>
-        );
-    }
+    // if (showForm) {
+    //     return (
+    //         <Suspense>
+    //             <ContactForm showForm={showForm} setShowForm={setShowForm} />
+    //         </Suspense>
+    //     );
+    // }
+
+    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
 
     return (
         <div onClick={() => setViewProduct(false)} className="fixed inset-0 bg-black/50 z-40 h-screen flex items-center justify-center">
@@ -106,14 +108,24 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                 <div className="px-5 py-2">
                     <div className="flex justify-between">
                         <h2 className="text-xl font-bold">{viewProduct.name}</h2>
-                        <button
+                        <a
+                            href={whatsappLink}
+                            target="_blank"
+                            id="contatoProduto"
+                            rel="noopener noreferrer"
+                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition"
+                        >
+                            <p className="text-white! leading-4">Solicitar Orçamento</p>
+                            <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
+                        </a>
+                        {/* <button
                             onClick={() => setShowForm(true)}
                             rel="noopener noreferrer"
                             className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
                         >
                             <p className="text-white! leading-4">Solicitar Orçamento</p>
                             <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
-                        </button>
+                        </button> */}
                     </div>
                     <p className="mt-2">{viewProduct.description}</p>
 
