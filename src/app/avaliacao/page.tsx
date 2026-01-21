@@ -16,7 +16,7 @@ export default function FeedbackPage() {
 
         setLoading(true);
 
-        await fetch("https://SEU_WEBHOOK_N8N_AQUI", {
+        await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/avaliacao", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -37,8 +37,8 @@ export default function FeedbackPage() {
 
     if (success) {
         return (
-            <div className="p-6 text-center">
-                <h2 className="text-2xl font-bold">🎉 Obrigado pelo seu feedback!</h2>
+            <div className="p-6 text-center min-h-lvh flex justify-center bg-[radial-gradient(ellipse_at_center,_#FFE5E6_-60%,_#EB3238_50%)] flex-col">
+                <h2 className="text-2xl font-bold text-black!">🎉 Obrigado pelo seu feedback!</h2>
                 <p>Seu cashback será enviado por e-mail.</p>
             </div>
         );
