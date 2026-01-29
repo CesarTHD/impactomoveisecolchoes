@@ -80,9 +80,9 @@ export default function CarouselProducts({ title, products, setViewProduct, id, 
             </div>
 
             {/* Modal com formulário */}
-            <Suspense>
+            {/* <Suspense>
                 <ContactForm showForm={showForm} setShowForm={setShowForm} />
-            </Suspense>
+            </Suspense> */}
         </div>
     )
 }
