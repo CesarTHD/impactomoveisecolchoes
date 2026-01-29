@@ -137,7 +137,7 @@ export default function ContactForm({ showForm, setShowForm }: any) {
     setLoading(true);
 
     try {
-      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook-test/lead/create", {
+      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/lead/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

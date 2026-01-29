@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter, useSearchParams } from "next/navigation";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { Suspense, useEffect, useState } from "react";
@@ -13,6 +13,11 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
     const router = useRouter();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [showForm, setShowForm] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const searchParams = useSearchParams();
+    const [redirecting, setRedirecting] = useState(false);
+
 
     const [sliderRef, instanceRef] = useKeenSlider({
         loop: true,
@@ -54,7 +59,48 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
     //     );
     // }
 
-    const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+    // const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+
+    const [gclid, setGclid] = useState<string | null>(null);
+    useEffect(() => {
+        const param = searchParams?.get("gclid");
+
+        if (param) {
+            localStorage.setItem("gclid", param);
+            setGclid(param);
+            return;
+        }
+        const stored = localStorage.getItem("gclid");
+        if (stored) {
+            setGclid(stored);
+        }
+    }, [searchParams]);
+
+    const solicitarOrcamento = async () => {
+        const payload = {
+            botao: 'contatoProduto',
+            produto: viewProduct,
+            gclid,
+        };
+
+        setError("");
+        setLoading(true);
+        setRedirecting(true);
+
+        try {
+            await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/conversoes-google-impacto", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+        } catch (error) {
+            // mesmo com erro, segue fluxo
+        } finally {
+            setLoading(false);
+            window.location.href = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+        }
+    };
+
 
     return (
         <div onClick={() => setViewProduct(false)} className="fixed inset-0 bg-black/50 z-40 h-screen flex items-center justify-center">
@@ -108,16 +154,18 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                 <div className="px-5 py-2">
                     <div className="flex justify-between">
                         <h2 className="text-xl font-bold">{viewProduct.name}</h2>
-                        <a
-                            href={whatsappLink}
-                            target="_blank"
+                        <button
+                            // href={whatsappLink}
+                            // target="_blank"
+                            disabled={redirecting}
+                            onClick={(e) => solicitarOrcamento()}
                             id="contatoProduto"
                             rel="noopener noreferrer"
-                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition"
+                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
                         >
                             <p className="text-white! leading-4">Solicitar Orçamento</p>
                             <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
-                        </a>
+                        </button>
                         {/* <button
                             onClick={() => setShowForm(true)}
                             rel="noopener noreferrer"
@@ -137,6 +185,18 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                     <p className="mt-2">Faça agora mesmo um orçamento de acordo com a medida e o material ideais para você.</p>
                 </div>
             </div>
+            {redirecting && (
+                <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
+                    <div className="bg-white rounded-2xl px-8 py-6 text-center shadow-xl">
+                        <p className="text-lg font-semibold">
+                            💬 Só um instante!
+                        </p>
+                        <p className="text-sm mt-2 text-gray-600">
+                            Estamos te levando para o WhatsApp para finalizar seu orçamento.
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
