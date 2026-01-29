@@ -96,6 +96,7 @@ export default function FloatingMenu() {
             {options.map((opt) => (
               <button
                 key={opt.query}
+                id="contatoEspecifico"
                 onClick={() =>
                   opt.query === "outros"
                     ? handleRedirect("")
