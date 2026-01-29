@@ -28,22 +28,7 @@ export default function HomeClient() {
   const [redirecting, setRedirecting] = useState(false);
   const [gclid, setGclid] = useState<string | null>(null);
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const param = searchParams?.get("gclid");
-
-    if (param) {
-      localStorage.setItem("gclid", param);
-      setGclid(param);
-      return;
-    }
-    const stored = localStorage.getItem("gclid");
-    if (stored) {
-      setGclid(stored);
-    }
-  }, [searchParams]);
-
-
+  
   useEffect(() => {
     const param = searchParams?.get("gclid");
 
