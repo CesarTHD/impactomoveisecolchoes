@@ -142,9 +142,9 @@ export default function HomeClient() {
           <button
             // href={whatsappLink}
             // target="_blank"
+            id="contatoEspecifico"
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
-            id="contatoEspecifico"
             rel="noopener noreferrer"
             className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
@@ -158,9 +158,9 @@ export default function HomeClient() {
           <button
             // href={whatsappLink}
             // target="_blank"
+            id="contatoEspecifico"
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
-            id="contatoEspecifico"
             rel="noopener noreferrer"
             className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
