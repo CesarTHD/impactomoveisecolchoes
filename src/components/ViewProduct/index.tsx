@@ -17,6 +17,11 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
     const [error, setError] = useState("");
     const searchParams = useSearchParams();
     const [redirecting, setRedirecting] = useState(false);
+    const [utmCampaign, setUtmCampaign] = useState<string | null>(null);
+    const [utmSource, setUtmSource] = useState<string | null>(null);
+    const [utmContent, setUtmContent] = useState<string | null>(null);
+    const [gclid, setGclid] = useState<string | null>(null);
+
 
 
     const [sliderRef, instanceRef] = useKeenSlider({
@@ -62,26 +67,52 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
 
     // const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
 
-    const [gclid, setGclid] = useState<string | null>(null);
     useEffect(() => {
-        const param = searchParams?.get("gclid");
+        if (!searchParams) return;
 
-        if (param) {
-            localStorage.setItem("gclid", param);
-            setGclid(param);
-            return;
+        const gclidParam = searchParams.get("gclid");
+        const utmCampaignParam = searchParams.get("utm_campaign");
+        const utmSourceParam = searchParams.get("utm_source");
+        const utmContentParam = searchParams.get("utm_content");
+
+        if (gclidParam) {
+            localStorage.setItem("gclid", gclidParam);
+            setGclid(gclidParam);
+        } else {
+            setGclid(localStorage.getItem("gclid"));
         }
-        const stored = localStorage.getItem("gclid");
-        if (stored) {
-            setGclid(stored);
+
+        if (utmCampaignParam) {
+            localStorage.setItem("utm_campaign", utmCampaignParam);
+            setUtmCampaign(utmCampaignParam);
+        } else {
+            setUtmCampaign(localStorage.getItem("utm_campaign"));
+        }
+
+        if (utmSourceParam) {
+            localStorage.setItem("utm_source", utmSourceParam);
+            setUtmSource(utmSourceParam);
+        } else {
+            setUtmSource(localStorage.getItem("utm_source"));
+        }
+
+        if (utmContentParam) {
+            localStorage.setItem("utm_content", utmContentParam);
+            setUtmContent(utmContentParam);
+        } else {
+            setUtmContent(localStorage.getItem("utm_content"));
         }
     }, [searchParams]);
 
+
     const solicitarOrcamento = async () => {
         const payload = {
-            botao: 'contatoProduto',
+            botao: "contatoProduto",
             produto: viewProduct,
             gclid,
+            utm_campaign: utmCampaign,
+            utm_source: utmSource,
+            utm_content: utmContent,
         };
 
         setError("");
@@ -98,7 +129,9 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
             // mesmo com erro, segue fluxo
         } finally {
             setLoading(false);
-            window.location.href = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+            setTimeout(() => {
+                window.location.href = `https://wa.me/5561993529881?text=Olá!+Tenho+interesse+no+produto+${viewProduct.name}.+Gostaria+de+fazer+um+orçamento!`;
+            }, 300);
         }
     };
 
@@ -162,7 +195,7 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                             onClick={(e) => solicitarOrcamento()}
                             id="contatoProduto"
                             rel="noopener noreferrer"
-                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
+                            className="contatoProduto px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
                         >
                             <p className="text-white! leading-4">Solicitar Orçamento</p>
                             <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />

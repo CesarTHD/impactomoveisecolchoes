@@ -82,9 +82,11 @@ export default function FloatingMenu() {
     } catch (error) {
       // falhou o webhook, mas não bloqueia conversão
     } finally {
-      window.location.href = `https://wa.me/5561993529881?text=${encodeURIComponent(
-        message
-      )}`;
+      setTimeout(() => {
+        window.location.href = `https://wa.me/5561993529881?text=${encodeURIComponent(
+          message
+        )}`;
+      }, 300);
     }
   };
 
@@ -102,7 +104,7 @@ export default function FloatingMenu() {
                     ? handleRedirect("")
                     : handleRedirect(opt.label)
                 }
-                className="text-sm text-left text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
+                className="contatoEspecifico text-sm text-left text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
               >
                 {opt.label}
               </button>

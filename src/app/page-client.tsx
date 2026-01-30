@@ -65,7 +65,10 @@ export default function HomeClient() {
     } catch (error) {
     } finally {
       setLoading(false);
-      window.location.href = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.`;
+      setTimeout(() => {
+      window.location.href =
+        "https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.";
+    }, 300);
     }
   };
 
@@ -146,7 +149,7 @@ export default function HomeClient() {
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
             rel="noopener noreferrer"
-            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
+            className="contatoEspecifico p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </button>
@@ -162,7 +165,7 @@ export default function HomeClient() {
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
             rel="noopener noreferrer"
-            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
+            className="contatoEspecifico p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </button>
