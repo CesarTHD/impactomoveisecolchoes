@@ -20,6 +20,7 @@ import mesas from "@/data/mesas.json";
 import paineis from "@/data/paineis.json";
 import FloatingMenu from "@/components/floatingMenu";
 import { useSearchParams } from "next/navigation";
+import ScrollCard from "@/components/ScrollCard";
 
 export default function HomeClient() {
   const [viewProduct, setViewProduct]: any = useState(false);
@@ -153,24 +154,36 @@ export default function HomeClient() {
         <div className="bg-[#fbfaeb]">
           <Specialties />
         </div>
-        <div className="py-24 xl:px-20  bg-[#E7DBCF]">
-          <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
-        </div>
-        <div className="py-22 xl:px-20  ">
-          <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
-        </div>
-        <div className="py-24 xl:px-20 bg-[#452712]">
-          <CarouselProducts id={"sofasCouro"} color="text-gray-300!" title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
-        </div>
-        <div className="py-24 xl:px-20 bg-[#fbfaeb]">
-          <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
-        </div>
-        <div className="py-24 xl:px-20 bg-[#E7DBCF]">
-          <CarouselProducts id={"poltronas-tecido"} title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
-        </div>
-        <div className="py-24 xl:px-20 bg-[#452712]">
-          <CarouselProducts id={"paineis"} color="text-gray-300!" title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
-        </div>
+        <ScrollCard>
+          <div className="py-24 xl:px-20  bg-[#E7DBCF]">
+            <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
+        <ScrollCard>
+          <div className="py-22 xl:px-20">
+            <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
+        <ScrollCard>
+          <div className="py-24 xl:px-20 bg-[#452712]">
+            <CarouselProducts id={"sofasCouro"} color="text-gray-300!" title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
+        <ScrollCard>
+          <div className="py-24 xl:px-20 bg-[#fbfaeb]">
+            <CarouselProducts id={"mesas"} title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
+        <ScrollCard>
+          <div className="py-24 xl:px-20 bg-[#E7DBCF]">
+            <CarouselProducts id={"poltronas-tecido"} title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
+        <ScrollCard>
+          <div className="py-24 xl:px-20 bg-[#452712]">
+            <CarouselProducts id={"paineis"} color="text-gray-300!" title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
         <div className="my-36">
           <Testimonials />
         </div>
@@ -187,9 +200,11 @@ export default function HomeClient() {
             <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </button>
         </div>
-        <div className="py-24 xl:px-20 bg-[#E7DBCF]">
-          <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
-        </div>
+        <ScrollCard>
+          <div className="py-24 xl:px-20 bg-[#E7DBCF]">
+            <CarouselProducts id={"poltronas"} title={"Poltronas em Couro Legítimo"} products={poltronasCouro} setViewProduct={setViewProduct} />
+          </div>
+        </ScrollCard>
         <div className="my-20 px-10">
           <button
             // href={whatsappLink}
