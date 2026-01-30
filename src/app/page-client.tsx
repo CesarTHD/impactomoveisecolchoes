@@ -28,9 +28,14 @@ export default function HomeClient() {
   const [redirecting, setRedirecting] = useState(false);
   const [gclid, setGclid] = useState<string | null>(null);
   const searchParams = useSearchParams();
-  
+  const [utmCampaign, setUtmCampaign] = useState<string | null>(null);
+  const [utmSource, setUtmSource] = useState<string | null>(null);
+  const [utmContent, setUtmContent] = useState<string | null>(null);
+
   useEffect(() => {
-    const param = searchParams?.get("gclid");
+    if (!searchParams) return;
+
+    const param = searchParams.get("gclid");
 
     if (param) {
       localStorage.setItem("gclid", param);
@@ -41,6 +46,31 @@ export default function HomeClient() {
     if (stored) {
       setGclid(stored);
     }
+
+    const utmCampaignParam = searchParams.get("utm_campaign");
+    const utmSourceParam = searchParams.get("utm_source");
+    const utmContentParam = searchParams.get("utm_content");
+
+    if (utmCampaignParam) {
+      localStorage.setItem("utm_campaign", utmCampaignParam);
+      setUtmCampaign(utmCampaignParam);
+    } else {
+      setUtmCampaign(localStorage.getItem("utm_campaign"));
+    }
+
+    if (utmSourceParam) {
+      localStorage.setItem("utm_source", utmSourceParam);
+      setUtmSource(utmSourceParam);
+    } else {
+      setUtmSource(localStorage.getItem("utm_source"));
+    }
+
+    if (utmContentParam) {
+      localStorage.setItem("utm_content", utmContentParam);
+      setUtmContent(utmContentParam);
+    } else {
+      setUtmContent(localStorage.getItem("utm_content"));
+    }
   }, [searchParams]);
 
   // const whatsappLink = `https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.`;
@@ -50,6 +80,9 @@ export default function HomeClient() {
       botao: 'contatoEspecifico',
       produto: '',
       gclid,
+      utmCampaign,
+      utmSource,
+      utmContent
     };
 
     setError("");
@@ -57,7 +90,7 @@ export default function HomeClient() {
     setRedirecting(true);
 
     try {
-      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/conversoes-google-impacto", {
+      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook-test/conversoes-google-impacto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -66,9 +99,9 @@ export default function HomeClient() {
     } finally {
       setLoading(false);
       setTimeout(() => {
-      window.location.href =
-        "https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.";
-    }, 300);
+        window.location.href =
+          "https://wa.me/5561993529881?text=Olá!+Estou+procurando+um+produto+específico.";
+      }, 300);
     }
   };
 

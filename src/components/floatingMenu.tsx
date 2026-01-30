@@ -13,6 +13,10 @@ export default function FloatingMenu() {
 
   const menuRef = useRef<HTMLDivElement>(null);
   const searchParams = useSearchParams();
+  const [utmCampaign, setUtmCampaign] = useState<string | null>(null);
+  const [utmSource, setUtmSource] = useState<string | null>(null);
+  const [utmContent, setUtmContent] = useState<string | null>(null);
+
 
   const options = [
     { label: "Sofá Caixa Zero", query: "sofa-caixa-zero" },
@@ -25,7 +29,9 @@ export default function FloatingMenu() {
 
   // Captura e persiste o gclid
   useEffect(() => {
-    const param = searchParams?.get("gclid");
+    if (!searchParams) return;
+
+    const param = searchParams.get("gclid");
 
     if (param) {
       localStorage.setItem("gclid", param);
@@ -36,6 +42,31 @@ export default function FloatingMenu() {
     const stored = localStorage.getItem("gclid");
     if (stored) {
       setGclid(stored);
+    }
+
+    const utmCampaignParam = searchParams.get("utm_campaign");
+    const utmSourceParam = searchParams.get("utm_source");
+    const utmContentParam = searchParams.get("utm_content");
+
+    if (utmCampaignParam) {
+      localStorage.setItem("utm_campaign", utmCampaignParam);
+      setUtmCampaign(utmCampaignParam);
+    } else {
+      setUtmCampaign(localStorage.getItem("utm_campaign"));
+    }
+
+    if (utmSourceParam) {
+      localStorage.setItem("utm_source", utmSourceParam);
+      setUtmSource(utmSourceParam);
+    } else {
+      setUtmSource(localStorage.getItem("utm_source"));
+    }
+
+    if (utmContentParam) {
+      localStorage.setItem("utm_content", utmContentParam);
+      setUtmContent(utmContentParam);
+    } else {
+      setUtmContent(localStorage.getItem("utm_content"));
     }
   }, [searchParams]);
 
@@ -68,11 +99,14 @@ export default function FloatingMenu() {
       botao: "floatingMenu",
       interesse: label || "outros",
       gclid,
+      utmCampaign,
+      utmSource,
+      utmContent
     };
 
     try {
       await fetch(
-        "https://n8n-n8n.3nrnye.easypanel.host/webhook/conversoes-google-impacto",
+        "https://n8n-n8n.3nrnye.easypanel.host/webhook-test/conversoes-google-impacto",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
