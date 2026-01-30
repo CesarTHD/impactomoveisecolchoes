@@ -150,7 +150,7 @@ export default function HomeClient() {
 
 
 
-      <div className="backdrop-blur-xl mask-fade-circle">
+      <div className="mask-fade-circle">
         <div className="bg-[#fbfaeb]">
           <Specialties />
         </div>
