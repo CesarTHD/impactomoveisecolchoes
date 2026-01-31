@@ -159,33 +159,33 @@ export default function HomeClient() {
           style={{ height: "600vh" }} // 6 cards = 6 * 100vh
         >
           <ScrollCard index={0}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#F2F0D8] rounded-t-4xl">
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#F3E6D8] rounded-t-4xl">
               <CarouselProducts id={"retrateis"} title={"Retráteis Caixa Zero"} products={caixaZero} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
           <ScrollCard index={1}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#D9CEB0] rounded-t-4xl mt-2">
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#E2C6A6] rounded-t-4xl mt-1 mx-1">
               <CarouselProducts id={"sofasCamas"} title={"Sofás-Camas Com e Sem Baú"} products={sofasCamas} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
           <ScrollCard index={2}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#F2935C] rounded-t-4xl mt-8">
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#C89B6D] rounded-t-4xl mt-3 mx-3">
               <CarouselProducts id={"sofasCouro"} color="text-gray-300!" title={"Sofás em Couro Legítimo"} products={sofasCouro} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
           <ScrollCard index={3}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#593E2E] rounded-t-4xl mt-16">
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#A86F42] rounded-t-4xl mt-7 mx-7">
               <CarouselProducts id={"mesas"} color="text-gray-300!" title={"Mesas em Madeira Maciça"} products={mesas} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
           <ScrollCard index={4}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#73221A] rounded-t-4xl mt-28">
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#7A4A2E] rounded-t-4xl mt-12 mx-12">
               <CarouselProducts id={"poltronas-tecido"} color="text-gray-300!" title={"Poltronas em Tecido Premium"} products={poltronasTecido} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
           <ScrollCard index={5}>
-            <div className="min-h-screen flex items-center xl:px-20 bg-[#F2935C] rounded-t-4xl mt-40">
-              <CarouselProducts id={"paineis"} color="text-[#73221A]!" title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
+            <div className="min-h-screen flex items-center xl:px-20 bg-[#3F2418] rounded-t-4xl mt-20 mx-20">
+              <CarouselProducts id={"paineis"} color="text-gray-300!" title={"Painéis Sofisticados e Funcionais"} products={paineis} setViewProduct={setViewProduct} />
             </div>
           </ScrollCard>
         </section>
