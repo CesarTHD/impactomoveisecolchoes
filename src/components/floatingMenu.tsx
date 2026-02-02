@@ -106,7 +106,7 @@ export default function FloatingMenu() {
 
     try {
       await fetch(
-        "https://n8n-n8n.3nrnye.easypanel.host/webhook-test/conversoes-google-impacto",
+        "https://n8n-n8n.3nrnye.easypanel.host/webhook/conversoes-google-impacto",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

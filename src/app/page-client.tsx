@@ -91,7 +91,7 @@ export default function HomeClient() {
     setRedirecting(true);
 
     try {
-      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook-test/conversoes-google-impacto", {
+      await fetch("https://n8n-n8n.3nrnye.easypanel.host/webhook/conversoes-google-impacto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
