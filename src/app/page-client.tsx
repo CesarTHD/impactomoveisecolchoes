@@ -41,8 +41,8 @@ export default function HomeClient() {
     if (param) {
       localStorage.setItem("gclid", param);
       setGclid(param);
-      return;
     }
+
     const stored = localStorage.getItem("gclid");
     if (stored) {
       setGclid(stored);

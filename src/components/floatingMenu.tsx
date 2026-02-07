@@ -36,7 +36,6 @@ export default function FloatingMenu() {
     if (param) {
       localStorage.setItem("gclid", param);
       setGclid(param);
-      return;
     }
 
     const stored = localStorage.getItem("gclid");
