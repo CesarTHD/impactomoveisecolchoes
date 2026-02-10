@@ -200,9 +200,9 @@ export default function HomeClient() {
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
             rel="noopener noreferrer"
-            className="contatoEspecifico p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
+            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
-            <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
+            <p id="contatoEspecifico" className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </button>
         </div>
         <div className="py-24 xl:px-20 bg-[#E7DBCF]">
@@ -216,9 +216,9 @@ export default function HomeClient() {
             disabled={redirecting}
             onClick={() => solicitarOrcamento()}
             rel="noopener noreferrer"
-            className="contatoEspecifico p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
+            className="p-2 flex bg-red-950 text-white justify-center items-center rounded-lg font-semibold hover:bg-red-900 transition max-w-xl mx-auto cursor-pointer"
           >
-            <p className="text-white!">Não encontrou o que deseja? Fale conosco</p>
+            <p id="contatoEspecifico" className="text-white!">Não encontrou o que deseja? Fale conosco</p>
           </button>
         </div>
         <div className="my-12">

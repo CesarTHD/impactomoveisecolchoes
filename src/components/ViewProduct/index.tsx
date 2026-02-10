@@ -195,10 +195,10 @@ const ViewProduct = ({ viewProduct, setViewProduct }: any) => {
                             onClick={(e) => solicitarOrcamento()}
                             id="contatoProduto"
                             rel="noopener noreferrer"
-                            className="contatoProduto px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
+                            className="px-4 flex bg-red-800 text-white justify-center items-center gap-4 py-1 rounded-lg font-semibold hover:bg-red-900 transition cursor-pointer"
                         >
-                            <p className="text-white! leading-4">Solicitar Orçamento</p>
-                            <Image src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
+                            <p id="contatoProduto" className="text-white! leading-4">Solicitar Orçamento</p>
+                            <Image id="contatoProduto" src={iconWhats} alt="whatsapp impacto móveis" width={23} height={20} />
                         </button>
                         {/* <button
                             onClick={() => setShowForm(true)}

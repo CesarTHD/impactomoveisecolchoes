@@ -137,7 +137,7 @@ export default function FloatingMenu() {
                     ? handleRedirect("")
                     : handleRedirect(opt.label)
                 }
-                className="contatoEspecifico text-sm text-left text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
+                className="text-sm text-left text-gray-800 hover:text-white hover:bg-red-700 px-3 py-1 rounded transition"
               >
                 {opt.label}
               </button>
