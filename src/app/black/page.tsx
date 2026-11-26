@@ -118,7 +118,7 @@ const PRODUTOS: Produto[] = [
 const PASSOS = [
   { t: "Escolha a oferta", s: "Veja os produtos em destaque e compare preços e condições." },
   { t: "Finalize o pedido", s: "Informe o endereço, escolha o frete e a forma de pagamento." },
-  { t: "Receba em casa", s: "Acompanhe a entrega pelo código de rastreio enviado por [CANAL]." },
+  { t: "Receba em casa", s: "A entrega costuma ser feita em até 48 horas. Consulte o prazo com o vendedor." },
 ];
 
 const PUBLICO = [
@@ -133,6 +133,7 @@ const FAQ = [
   { q: "Como funciona o parcelamento em 36x no boleto?", a: "Você pode parcelar em até 36x no boleto. Consulte condições para saber a parcela do móvel escolhido. Sujeito a análise de crédito." },
   { q: "Qual o preço da mesa com cadeiras?", a: "A mesa com cadeiras da Black November sai a partir de R$ 1.599. O valor varia conforme o modelo." },
   { q: "Como funciona o frete?", a: "O frete é para o DF e regiões próximas. Entre em contato para mais informações sobre a condição para o seu endereço." },
+  { q: "Qual o prazo de entrega?", a: "Normalmente a entrega é feita em até 48 horas. Consulte o prazo com o vendedor para o seu endereço." },
   { q: "Tem entrega e montagem grátis?", a: "Sim, em compras a partir de R$ 4.000 a entrega e a montagem são grátis." },
   { q: "Até quando valem as ofertas da Black November?", a: "Por tempo limitado, até 30/11 ou enquanto durarem os estoques." },
 ];
@@ -744,7 +745,7 @@ export default function BlackPage() {
         <footer className="ftr">
           <div className="wrap ftr-in">
             <img src="/black/logo-impacto.png" alt="Impacto Móveis e Colchões" width="714" height="645" loading="lazy" decoding="async" />
-            <span>Impacto Móveis · Desde 2006 · QNE 07, Taguatinga-DF · CNPJ [00.000.000/0000-00]</span>
+            <span>Impacto Móveis · Desde 2006 · QNE 07, Taguatinga-DF · CNPJ 54.035.743/0001-26</span>
             <span>
               Consulte condições · Política de privacidade · WhatsApp{" "}
               <a href={WA_GERAL} target="_blank" rel="noopener noreferrer">
